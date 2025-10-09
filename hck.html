@@ -26,6 +26,12 @@
         --light: #ffffff;
         --dark: #2c3e50;
         --sky-light: #e1f5fe; /* Light sky blue for backgrounds */
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -38,7 +44,7 @@
       a {
         text-decoration: none;
         color: inherit;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       ul {
@@ -61,7 +67,8 @@
         border-radius: 30px;
         font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: var(--transition);
+        text-align: center;
       }
 
       .btn:hover {
@@ -110,7 +117,7 @@
         width: 100%;
         top: 0;
         z-index: 1000;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .header-container {
@@ -128,6 +135,7 @@
       .logo img {
         height: 150px;
         margin-right: 10px;
+        transition: var(--transition);
       }
 
       .logo-text {
@@ -173,7 +181,7 @@
 
       /* Hero Section */
       .hero {
-        background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(41, 128, 185, 0.7)),
+        background: linear-gradient(rgba(52, 152, 219, 0.1), rgba(41, 128, 185, 0.1)),
           url(images/hero.png) no-repeat center center/cover;
         height: 100vh;
         display: flex;
@@ -192,6 +200,7 @@
         font-size: 3.5rem;
         margin-bottom: 20px;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
       }
 
       .hero p {
@@ -215,7 +224,13 @@
         flex: 1;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .about-image:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
       .about-image img {
@@ -255,9 +270,12 @@
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
+        transition: var(--transition);
         padding: 25px;
         border-top: 5px solid var(--primary);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
 
       .service-card:hover {
@@ -291,6 +309,7 @@
 
       .service-description {
         margin-bottom: 20px;
+        flex-grow: 1;
       }
 
       .technique-tag {
@@ -317,9 +336,10 @@
         background-color: var(--light);
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--shadow);
         text-align: center;
         display: none;
+        animation: fadeIn 0.8s ease;
       }
 
       .testimonial.active {
@@ -330,6 +350,7 @@
         font-style: italic;
         margin-bottom: 20px;
         position: relative;
+        font-size: 1.1rem;
       }
 
       .testimonial-text:before,
@@ -354,12 +375,14 @@
       .testimonial-author {
         font-weight: 600;
         color: var(--primary);
+        font-size: 1.1rem;
       }
 
       .slider-controls {
         display: flex;
         justify-content: center;
         margin-top: 30px;
+        gap: 10px;
       }
 
       .slider-dot {
@@ -367,13 +390,13 @@
         height: 12px;
         border-radius: 50%;
         background-color: #ccc;
-        margin: 0 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: var(--transition);
       }
 
       .slider-dot.active {
         background-color: var(--primary);
+        transform: scale(1.2);
       }
 
       /* Appointments Section */
@@ -393,7 +416,7 @@
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
+        transition: var(--transition);
         padding: 25px;
         display: flex;
         flex-direction: column;
@@ -408,6 +431,14 @@
 
       .service-info {
         margin-bottom: 20px;
+      }
+
+      .service-info img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
       }
 
       .service-name {
@@ -439,7 +470,7 @@
         border-radius: 5px;
         padding: 10px 20px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: var(--transition);
         text-align: center;
         display: block;
         width: 100%;
@@ -447,6 +478,46 @@
 
       .btn-primary:hover {
         background-color: var(--primary-dark);
+      }
+
+      /* Gustavo Section */
+      .gustavo-section {
+        padding: 80px 0;
+        background-color: var(--sky-light);
+      }
+
+      .gustavo-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .gustavo-header {
+        margin-bottom: 40px;
+      }
+
+      .gustavo-header h4 {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .line {
+        width: 80px;
+        height: 3px;
+        background-color: var(--accent);
+        margin: 0 auto;
+      }
+
+      .gustavo-text {
+        text-align: left;
+      }
+
+      .gustavo-text p {
+        margin-bottom: 20px;
       }
 
       /* Contact Section */
@@ -485,6 +556,7 @@
         align-items: center;
         justify-content: center;
         margin-right: 15px;
+        flex-shrink: 0;
       }
 
       .contact-form {
@@ -507,7 +579,7 @@
         border: 1px solid #ddd;
         border-radius: 5px;
         font-size: 1rem;
-        transition: border-color 0.3s ease;
+        transition: var(--transition);
       }
 
       .form-control:focus {
@@ -570,7 +642,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .social-link:hover {
@@ -595,6 +667,7 @@
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 2000;
         overflow-y: auto;
+        animation: fadeIn 0.3s ease;
       }
 
       .modal-content {
@@ -627,7 +700,7 @@
         font-size: 1.5rem;
         cursor: pointer;
         color: var(--text);
-        transition: color 0.3s ease;
+        transition: var(--transition);
       }
 
       .close-modal:hover {
@@ -667,6 +740,53 @@
         }
       }
 
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      /* Loading Animation */
+      .loading {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+        margin-right: 10px;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
       /* Responsive Styles */
       @media (max-width: 992px) {
         .about-content,
@@ -696,6 +816,7 @@
           justify-content: flex-start;
           padding-top: 50px;
           transition: left 0.3s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .nav-menu.active {
@@ -725,6 +846,11 @@
         .footer-column {
           margin-right: 0;
           margin-bottom: 30px;
+        }
+
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
         }
       }
     </style>
@@ -805,11 +931,11 @@
           <div class="service-card fade-in">
             <div class="service-header">
               <div class="service-number">1</div>
-              <h3 class="service-title">Body Reset Session</h3>
+              <h3 class="service-title">Executive Package</h3>
             </div>
             <div class="service-body">
               <p class="service-description">
-                Executive Package: Enjoy two 3-hour Resets a month. The first
+                 Enjoy two 3-hour Resets a month. The first
                 session sets the flow in motion, anchoring your intentions for
                 the month and aligning you with them. The second session clears
                 lingering stress and body tension, makes necessary adjustments,
@@ -824,11 +950,11 @@
           <div class="service-card fade-in delay-1">
             <div class="service-header">
               <div class="service-number">2</div>
-              <h3 class="service-title">Luxury Reset Experience</h3>
+              <h3 class="service-title">Deep Support Package</h3>
             </div>
             <div class="service-body">
               <p class="service-description">
-                Deep Support Package: Receive four 90-minute Resets a month to
+                 Receive four 90-minute Resets a month to
                 keep you steadily progressing toward your wellness and work
                 goals. This package provides ongoing nurturing and alignment,
                 ensuring that your body and spirit remain relaxed and focused.
@@ -842,12 +968,12 @@
           <div class="service-card fade-in delay-2">
             <div class="service-header">
               <div class="service-number">3</div>
-              <h3 class="service-title">Rejuvenating Jade Stone Treatment</h3>
+              <h3 class="service-title">And More</h3>
             </div>
             <div class="service-body">
               <p class="service-description">
                 We also offer custom packages and benefits to encourage
-                long-term commitments to your well-being journey. Experience the healing power of jade stones combined with traditional techniques for ultimate relaxation and rejuvenation.
+                long-term commitments to your well-being journey.
               </p>
               <span class="technique-tag"> <b>Value:</b> $900</span>
               <span class="technique-tag"> <b>Package Offer:</b> $825</span>
@@ -982,8 +1108,8 @@
           </div>
           <div class="appointment-card fade-in delay-1">
             <div class="service-info">
-              <img src="https://via.placeholder.com/300x200?text=Energy+Healing" alt="Energy Healing Session">
-              <h3 class="service-name">Energy Healing Session</h3>
+              <img src="images/fourl.png" alt="Energy Healing Session">
+              <h3 class="service-name">Energetic Lavender Salt Body Scrub</h3>
               <div class="service-details">
                 <span class="duration">
                   <i class="fas fa-clock"></i>
@@ -1000,8 +1126,8 @@
 
           <div class="appointment-card fade-in delay-2">
             <div class="service-info">
-              <img src="https://via.placeholder.com/300x200?text=Chakra+Balance" alt="Chakra Balancing">
-              <h3 class="service-name">Chakra Balancing</h3>
+              <img src="images/fivel.png" alt="Chakra Balancing">
+              <h3 class="service-name"> Mantak Chia Castor Oil Stomach Massage</h3>
               <div class="service-details">
                 <span class="duration">
                   <i class="fas fa-clock"></i>
@@ -1019,6 +1145,28 @@
       </div>
     </section>
 
+    <!-- Gustavo Section -->
+    <section class="section gustavo-section">
+      <div class="container">
+        <h2 class="section-title">Gustavo de la Torre</h2>
+        <div class="gustavo-content">
+          <div class="gustavo-header">
+            <h4>Caring For Your Wellbeing</h4>
+            <div class="line"></div>
+          </div>
+          <div class="gustavo-text">
+            <p>Step into the world of profound healing with, Gustavo de la Torre, aka "DreamBear"—a name bestowed upon me by an elder, symbolizing my spiritual journey.</p>
+            <p>As a seasoned Bodyworker and Energy Healer with over two decades of experience, I've guided countless souls towards transformative wellness. My passion extends beyond the physical, delving deep into emotional and energetic layers to ignite the spark of healing within you.</p>
+            <p>Through a holistic approach, I aim to untangle emotional and physical knots, fostering harmony between mind, body, and spirit. Central to my practice is the powerful Rice Release Technique™, liberating emotional and physical burdens trapped within the body's core. This technique grants newfound freedom and ease as past struggles dissipate.</p>
+            <p>Through a holistic approach, I aim to untangle emotional and physical knots, fostering harmony between mind, body, and spirit. Central to my practice is the powerful Rice Release Technique™, liberating emotional and physical burdens trapped within the body's core. This technique grants newfound freedom and ease as past struggles dissipate.</p>
+            <p>My work isn't just about techniques—it's about creating a sacred space for each client, where vulnerability is embraced without judgment. With empathy and understanding, I accompany you on this transformative journey, honoring your unique path.</p>
+            <p>I'm dedicated to empowering you to heal yourself, and together, we peel away layers that no longer serve you, revealing your radiant essence within. If you seek more than a session—if you desire an experience that touches your soul and ignites lasting change—I invite you to join me on this healing path. Reconnect with your authentic self and unlock boundless potential.</p>
+            <p>Book a call, and together, we will chat about how to create a symphony of healing vibrations that harmonize your mind, body, and spirit. The journey to transformative wellness begins with a single step. Let's take it together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section contact" id="contact">
       <div class="container">
@@ -1029,44 +1177,32 @@
             <div class="contact-details">
               <div class="contact-detail">
                 <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>123 Healing Way, Wellness City, WC 12345</p>
-                </div>
+                <span>123 Healing Street, Wellness City, WC 12345</span>
               </div>
               <div class="contact-detail">
-                <i class="fas fa-phone"></i>
-                <div>
-                  <h4>Phone</h4>
-                  <p>(555) 123-4567</p>
-                </div>
+                <i class="fas fa-phone-alt"></i>
+                <span>+1 (555) 123-4567</span>
               </div>
               <div class="contact-detail">
                 <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>info@dreambearhealing.com</p>
-                </div>
+                <span>info@dreambearhealing.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Fri: 9am - 6pm, Sat: 10am - 4pm</span>
               </div>
             </div>
-            <h3>Follow Us</h3>
             <div class="social-links">
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
               <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-pinterest"></i
-              ></a>
             </div>
           </div>
           <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
-                <label for="name">Your Name</label>
+                <label for="name">Full Name</label>
                 <input type="text" id="name" class="form-control" required />
               </div>
               <div class="form-group">
@@ -1078,22 +1214,10 @@
                 <input type="tel" id="phone" class="form-control" />
               </div>
               <div class="form-group">
-                <label for="service">Service Interested In</label>
-                <select id="service" class="form-control">
-                  <option value="">Select a service</option>
-                  <option value="reiki">Reiki Energy Healing</option>
-                  <option value="chakra">Chakra Balancing</option>
-                  <option value="sound">Sound Therapy</option>
-                  <option value="meditation">Meditation Guidance</option>
-                  <option value="emotional">Emotional Release</option>
-                  <option value="intuitive">Intuitive Readings</option>
-                </select>
-              </div>
-              <div class="form-group">
                 <label for="message">Your Message</label>
                 <textarea id="message" class="form-control" required></textarea>
               </div>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
           </div>
         </div>
@@ -1107,8 +1231,8 @@
           <div class="footer-column">
             <h3>Dreambear Healing</h3>
             <p>
-              Providing holistic healing services to restore balance and harmony
-              to mind, body, and spirit.
+              Providing holistic healing services to help you achieve balance
+              and wellness in body, mind, and spirit.
             </p>
           </div>
           <div class="footer-column">
@@ -1117,7 +1241,6 @@
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#appointments">Appointments</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1125,168 +1248,114 @@
           <div class="footer-column">
             <h3>Services</h3>
             <ul class="footer-links">
-              <li><a href="#">Reiki Energy Healing</a></li>
+              <li><a href="#">Body Reset Session</a></li>
+              <li><a href="#">Luxury Reset Experience</a></li>
+              <li><a href="#">Rejuvenating Jade Stone Massage</a></li>
+              <li><a href="#">Energetic Lavender Salt Body Scrub</a></li>
               <li><a href="#">Chakra Balancing</a></li>
-              <li><a href="#">Sound Therapy</a></li>
-              <li><a href="#">Meditation Guidance</a></li>
-              <li><a href="#">Emotional Release</a></li>
             </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Newsletter</h3>
-            <p>Subscribe to receive healing tips and special offers.</p>
-            <form class="newsletter-form">
-              <input
-                type="email"
-                placeholder="Your email address"
-                class="form-control"
-              />
-              <button type="submit" class="btn">Subscribe</button>
-            </form>
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2023 Dreambear Healing. All rights reserved.</p>
+          <p>&copy; 2023 Dreambear Healing. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Read More Modal -->
-    <div id="readMoreModal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 class="modal-title">About DreamBear Healing</h2>
-        <p>Gustavo combines decades of bodywork expertise with powerful Energy Healing skills to empower your well-being.</p>
-         <p>Using the *Rice Release Technique™, he clears old, stagnant emotional and physical patterns that manifest as pain in your body. These patterns, which often lead to stress and discomfort, are transformed to create a new sense of alignment.</p>
-<p>With four years of intensive training as a Shaman, Gustavo collaborates with your Guides to empower your intentions.
-</p>
-
-<p>In Gustavo's capable hands, he assesses and witnesses your health, work, and personal goals. He tracks and updates your progress as you achieve your desired outcomes.</p>
-
-<p>You have the flexibility to mix and match treatments to optimize your focus and desired impact.</p>
-
-<p>Each session begins with setting clear intentions for what you want to release and manifest. For example, you might choose our 3-hour Luxury Reset when you desire a fresh start, relief from pain, and a purposeful leap forward.</p>
-
-<p>During the session, Gustavo calls upon your Guides and activates a crystal grid beneath the table. He treats your body to solfeggio frequencies and a luxurious lavender salt scrub, leaving your skin refreshed and revitalized.</p>
-
-<p>While you shower off the salt, he prepares the space for your Alignment Session. Choose a Guidance Card to gain clarity on your goals while relaxing in DreamBear's unique Healing Sanctuary.</p>
-
-<p>Gustavo's skilled hands assess your body's alignment through your neck and employ the Rice Technique to alleviate pain and reset your system.
-</p>
-
-<p>Gustavo's skilled hands assess your body's alignment through your neck and employ the Rice Technique to alleviate pain and reset your system.
-</p>
-
-<p>
-If you desire deeper relaxation and detoxification, you can opt for a hot and cold jade stone treatment as an extension of Gustavo's expertise. This treatment offers profound muscle relaxation through the therapeutic use of temperature contrasts.
-
-</p>
-
-<p>Alternatively, you can experience the Master's Hands, Heart, and Sacred Intent in a deeply safe and loving environment, allowing you to receive the support you need to be the best version of yourself.
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-We offer tailored packages to suit your needs:
-      </div>
-    </div>
-
     <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
+    <div class="modal" id="bookingModal">
       <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h2 class="modal-title">Book Your Session</h2>
         <form class="modal-form" id="bookingForm">
           <div class="form-group">
-            <label for="booking-name">Full Name</label>
-            <input type="text" id="booking-name" class="form-control" required />
+            <label for="bookingService">Service</label>
+            <input type="text" id="bookingService" class="form-control" readonly />
           </div>
           <div class="form-group">
-            <label for="booking-email">Email Address</label>
-            <input type="email" id="booking-email" class="form-control" required />
+            <label for="bookingName">Full Name</label>
+            <input type="text" id="bookingName" class="form-control" required />
           </div>
           <div class="form-group">
-            <label for="booking-phone">Phone Number</label>
-            <input type="tel" id="booking-phone" class="form-control" required />
+            <label for="bookingEmail">Email Address</label>
+            <input type="email" id="bookingEmail" class="form-control" required />
           </div>
           <div class="form-group">
-            <label for="booking-service">Service</label>
-            <input type="text" id="booking-service" class="form-control" readonly />
+            <label for="bookingPhone">Phone Number</label>
+            <input type="tel" id="bookingPhone" class="form-control" required />
           </div>
           <div class="form-group">
-            <label for="booking-date">Preferred Date</label>
-            <input type="date" id="booking-date" class="form-control" required />
+            <label for="bookingDate">Preferred Date</label>
+            <input type="date" id="bookingDate" class="form-control" required />
           </div>
           <div class="form-group">
-            <label for="booking-time">Preferred Time</label>
-            <select id="booking-time" class="form-control" required>
+            <label for="bookingTime">Preferred Time</label>
+            <select id="bookingTime" class="form-control" required>
               <option value="">Select a time</option>
-              <option value="9:00 AM">9:00 AM</option>
-              <option value="10:30 AM">10:30 AM</option>
-              <option value="12:00 PM">12:00 PM</option>
-              <option value="1:30 PM">1:30 PM</option>
-              <option value="3:00 PM">3:00 PM</option>
-              <option value="4:30 PM">4:30 PM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="booking-message">Additional Notes (Optional)</label>
-            <textarea id="booking-message" class="form-control" rows="3"></textarea>
+            <label for="bookingMessage">Additional Notes (Optional)</label>
+            <textarea id="bookingMessage" class="form-control" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn">Book Now</button>
+          <button type="submit" class="btn btn-primary" id="submitBooking">
+            <span class="loading" id="bookingLoading"></span>
+            Book Now
+          </button>
         </form>
       </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
     <script>
       // Mobile Navigation Toggle
-      document.querySelector(".mobile-toggle").addEventListener("click", function () {
-        document.querySelector(".nav-menu").classList.toggle("active");
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileToggle.innerHTML = navMenu.classList.contains('active') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
       });
 
       // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.querySelector(".nav-menu").classList.remove("active");
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
         });
       });
 
       // Testimonial Slider
-      const testimonials = document.querySelectorAll(".testimonial");
-      const dots = document.querySelectorAll(".slider-dot");
+      const testimonials = document.querySelectorAll('.testimonial');
+      const dots = document.querySelectorAll('.slider-dot');
       let currentTestimonial = 0;
 
       function showTestimonial(index) {
-        testimonials.forEach((testimonial) => {
-          testimonial.classList.remove("active");
-        });
-        dots.forEach((dot) => {
-          dot.classList.remove("active");
-        });
-
-        testimonials[index].classList.add("active");
-        dots[index].classList.add("active");
+        testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonials[index].classList.add('active');
+        dots[index].classList.add('active');
         currentTestimonial = index;
       }
 
       dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
+        dot.addEventListener('click', () => {
           showTestimonial(index);
         });
       });
@@ -1297,87 +1366,106 @@ We offer tailored packages to suit your needs:
         showTestimonial(currentTestimonial);
       }, 5000);
 
-      // Modal Functionality
-      const readMoreBtn = document.querySelector(".read-more-btn");
-      const bookBtns = document.querySelectorAll(".book-btn");
-      const readMoreModal = document.getElementById("readMoreModal");
-      const bookingModal = document.getElementById("bookingModal");
-      const closeButtons = document.querySelectorAll(".close-modal");
+      // Booking Modal
+      const bookingModal = document.getElementById('bookingModal');
+      const bookButtons = document.querySelectorAll('.book-btn');
+      const closeModal = document.querySelector('.close-modal');
+      const bookingService = document.getElementById('bookingService');
+      const bookingForm = document.getElementById('bookingForm');
+      const submitBooking = document.getElementById('submitBooking');
+      const bookingLoading = document.getElementById('bookingLoading');
 
-      // Read More Modal
-      readMoreBtn.addEventListener("click", () => {
-        readMoreModal.style.display = "block";
-      });
-
-      // Booking Modals
-      bookBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const service = btn.getAttribute("data-service");
-          document.getElementById("booking-service").value = service;
-          bookingModal.style.display = "block";
+      bookButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const service = button.getAttribute('data-service');
+          bookingService.value = service;
+          bookingModal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
         });
       });
 
-      // Close Modals
-      closeButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          readMoreModal.style.display = "none";
-          bookingModal.style.display = "none";
-        });
+      closeModal.addEventListener('click', () => {
+        bookingModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
       });
 
-      // Close modal when clicking outside
-      window.addEventListener("click", (e) => {
-        if (e.target === readMoreModal) {
-          readMoreModal.style.display = "none";
-        }
+      window.addEventListener('click', (e) => {
         if (e.target === bookingModal) {
-          bookingModal.style.display = "none";
+          bookingModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
         }
       });
 
-      // Form Submissions
-      document.getElementById("contactForm").addEventListener("submit", (e) => {
+      // Booking Form Submission
+      bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert("Thank you for your message! We will get back to you soon.");
-        e.target.reset();
-      });
-
-      document.getElementById("bookingForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Thank you for your booking request! We will confirm your appointment shortly.");
-        bookingModal.style.display = "none";
-        e.target.reset();
-      });
-
-      // Scroll animations
-      function checkScroll() {
-        const fadeElements = document.querySelectorAll(".fade-in");
         
-        fadeElements.forEach((element) => {
+        // Show loading animation
+        bookingLoading.style.display = 'inline-block';
+        submitBooking.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+          bookingLoading.style.display = 'none';
+          submitBooking.disabled = false;
+          alert('Thank you for your booking! We will contact you shortly to confirm your appointment.');
+          bookingModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          bookingForm.reset();
+        }, 2000);
+      });
+
+      // Contact Form Submission
+      const contactForm = document.getElementById('contactForm');
+      
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+
+      // Back to Top Button
+      const backToTop = document.querySelector('.back-to-top');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Fade in elements on scroll
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const fadeInOnScroll = () => {
+        fadeElements.forEach(element => {
           const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
+          const elementVisible = 150;
           
-          if (elementTop < windowHeight - 100) {
-            element.style.opacity = "1";
-            element.style.transform = "translateY(0)";
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
           }
         });
-      }
+      };
+      
+      window.addEventListener('scroll', fadeInOnScroll);
+      // Initial check in case elements are already in view
+      fadeInOnScroll();
 
-      window.addEventListener("scroll", checkScroll);
-      window.addEventListener("load", checkScroll);
-
-      // Header scroll effect
-      window.addEventListener("scroll", () => {
-        const header = document.querySelector("header");
-        if (window.scrollY > 100) {
-          header.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
-          header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
-        } else {
-          header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
-          header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
-        }
+      // Read More Button
+      const readMoreBtn = document.querySelector('.read-more-btn');
+      
+      readMoreBtn.addEventListener('click', () => {
+        alert('More information about DreamBear Healing packages will be displayed here.');
       });
     </script>
   </body>
