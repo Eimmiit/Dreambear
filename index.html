@@ -8,6 +8,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Calendly widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <style>
       /* Reset and Base Styles */
       * {
@@ -253,72 +256,83 @@
         margin-bottom: 20px;
       }
 
-      /* Services Section */
-      .services {
+      /* Bodywork & Alignment Section */
+      .bodywork-section {
         padding: 80px 0;
         background-color: var(--secondary);
       }
 
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
+      .bodywork-content {
+        max-width: 900px;
+        margin: 0 auto;
       }
 
-      .service-card {
+      .bodywork-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .bodywork-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .bodywork-header h3 {
+        font-size: 1.8rem;
+        color: var(--text);
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--accent);
+        margin: 0 auto 30px;
+      }
+
+      .bodywork-text {
+        margin-bottom: 40px;
+      }
+
+      .bodywork-text p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .bodywork-subsection {
+        margin-bottom: 40px;
+        padding: 30px;
         background-color: var(--light);
         border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: var(--transition);
-        padding: 25px;
-        border-top: 5px solid var(--primary);
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        box-shadow: var(--shadow);
       }
 
-      .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(52, 152, 219, 0.1);
-      }
-
-      .service-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .service-number {
-        background-color: var(--primary);
-        color: var(--light);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        margin-right: 15px;
-      }
-
-      .service-title {
+      .bodywork-subsection h4 {
         font-size: 1.5rem;
         color: var(--primary);
-      }
-
-      .service-description {
         margin-bottom: 20px;
-        flex-grow: 1;
+        text-align: center;
       }
 
-      .technique-tag {
-        display: block;
-        margin-bottom: 8px;
-        padding: 5px 10px;
-        background-color: var(--sky-light);
-        border-radius: 5px;
-        border-left: 3px solid var(--primary);
+      .bodywork-subsection ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .bodywork-subsection li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .bodywork-subsection li:before {
+        content: "•";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+        font-size: 1.2rem;
       }
 
       /* Testimonials */
@@ -787,6 +801,55 @@
         to { transform: rotate(360deg); }
       }
 
+      /* New Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .floating {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      /* Read More Modal Styles */
+      .read-more-modal .modal-content {
+        max-width: 800px;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .read-more-content h3 {
+        color: var(--primary);
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+
+      .read-more-content p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+      }
+
+      /* Calendly Modal Styles */
+      .calendly-modal .modal-content {
+        max-width: 1000px;
+        height: 80vh;
+        padding: 20px;
+      }
+
+      .calendly-inline-widget {
+        height: 100%;
+        min-height: 650px;
+      }
+
       /* Responsive Styles */
       @media (max-width: 992px) {
         .about-content,
@@ -839,6 +902,14 @@
           font-size: 2rem;
         }
 
+        .bodywork-header h2 {
+          font-size: 2rem;
+        }
+
+        .bodywork-header h3 {
+          font-size: 1.5rem;
+        }
+
         .footer-content {
           flex-direction: column;
         }
@@ -851,6 +922,10 @@
         .back-to-top {
           bottom: 20px;
           right: 20px;
+        }
+
+        .calendly-modal .modal-content {
+          height: 70vh;
         }
       }
     </style>
@@ -866,7 +941,7 @@
           <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#bodywork">Bodywork & Alignment</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#appointments">Appointments</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -882,8 +957,8 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
-          <p>Alignment Specialist</p>
-          <h1>RELEASE RESET RENEW</h1>
+          <p class="floating">Alignment Specialist</p>
+          <h1 class="pulse">RELEASE RESET RENEW</h1>
           <a href="#contact" class="btn">Book a Session</a>
         </div>
       </div>
@@ -892,7 +967,7 @@
     <!-- About Section -->
     <section class="section about" id="about">
       <div class="container">
-        <h2 class="section-title">New Year Spiritual Entrepreneur Packages</h2>
+        <h2 class="section-title">About DreamBear Healing</h2>
         <div class="about-content">
           <div class="about-image">
             <img src="images/topLeft.png" alt="Healing practitioner" />
@@ -923,62 +998,44 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Bodywork & Alignment Section -->
+    <section id="bodywork" class="section bodywork-section">
       <div class="container">
-        <h2 class="section-title">HOLISTIC TREATMENTS</h2>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <div class="service-header">
-              <div class="service-number">1</div>
-              <h3 class="service-title">Executive Package</h3>
-            </div>
-            <div class="service-body">
-              <p class="service-description">
-                 Enjoy two 3-hour Resets a month. The first
-                session sets the flow in motion, anchoring your intentions for
-                the month and aligning you with them. The second session clears
-                lingering stress and body tension, makes necessary adjustments,
-                realigns if needed, and gives you a power boost forward.
-              </p>
-              <span class="technique-tag"> <b>Value:</b> $900</span>
-              <span class="technique-tag"> <b>Package Offer:</b> $825</span>
-              <span class="technique-tag"> <b>Savings:</b> $75</span>
-            </div>
+        <div class="bodywork-content">
+          <div class="bodywork-header">
+            <h2>Bodywork & Alignment Specialist</h2>
+            <h3>Reset Your Life with Safety, Presence, and Deep Care</h3>
+            <div class="divider"></div>
           </div>
-
-          <div class="service-card fade-in delay-1">
-            <div class="service-header">
-              <div class="service-number">2</div>
-              <h3 class="service-title">Deep Support Package</h3>
-            </div>
-            <div class="service-body">
-              <p class="service-description">
-                 Receive four 90-minute Resets a month to
-                keep you steadily progressing toward your wellness and work
-                goals. This package provides ongoing nurturing and alignment,
-                ensuring that your body and spirit remain relaxed and focused.
-              </p>
-              <span class="technique-tag"> <b>Value:</b> $2,000</span>
-              <span class="technique-tag"> <b>Package Offer:</b> $1,600 </span>
-              <span class="technique-tag"> <b>Savings:</b> $400</span>
-            </div>
+          <div class="bodywork-text">
+            <p>When your body is ready for resolution, healing begins gently at your own pace.</p>
+            <p>I'm an energy-sensitive healing facilitator with decades of experience in bodywork, energetic healing, and intuitive alignment work. Since the early days of the Covid era, I've been immersed in an intensive spiritual apprenticeship with internationally respected shaman AnkRa JOY, a master alchemist who has guided and trained healers worldwide for over forty years.</p>
+            <p>Working under her mentorship has transformed both my personal and professional path, refining my ability to hold safe, grounded, and compassionate space for others. My approach is built on the understanding that the body carries its own intelligence and when we learn to listen deeply, healing unfolds naturally.</p>
           </div>
-
-          <div class="service-card fade-in delay-2">
-            <div class="service-header">
-              <div class="service-number">3</div>
-              <h3 class="service-title">And More</h3>
-            </div>
-            <div class="service-body">
-              <p class="service-description">
-                We also offer custom packages and benefits to encourage
-                long-term commitments to your well-being journey.
-              </p>
-              <span class="technique-tag"> <b>Value:</b> $900</span>
-              <span class="technique-tag"> <b>Package Offer:</b> $825</span>
-              <span class="technique-tag"> <b>Savings:</b> $75</span>
-            </div>
+          
+          <div class="bodywork-subsection">
+            <h4>A Trauma-Informed Approach</h4>
+            <p>At DreamBear Healing, every session begins with safety and consent. Together, we take time to ground, connect, and set intentions so that your body and nervous system feel supported.</p>
+            <p>I never force or push the body instead, I invite it to release what it's ready to let go of. The work is designed to reduce pain without adding pain, gently unwinding stored tension and energy so your body can find its own balance and rhythm again.</p>
+            <p>Many people carry long-held physical or emotional pain patterns that quietly diminish their quality of life. My role is to help you reconnect to your body's wisdom and create the conditions for authentic, sustainable healing.</p>
+          </div>
+          
+          <div class="bodywork-subsection">
+            <h4>Who This Work Supports</h4>
+            <p>Clients who benefit most from my work often fall into one or more of these categories:</p>
+            <ul>
+              <li>Those experiencing chronic or persistent pain who are ready to release the emotional and energetic layers contributing to it.</li>
+              <li>Individuals on a healing or spiritual journey who've done deep inner work yet feel an energetic "block" or stagnation showing up in the body.</li>
+              <li>People seeking deep relaxation and nervous system restoration through extended sessions that provide peace, clarity, and rejuvenation.</li>
+            </ul>
+            <p>Whether your focus is physical, emotional, or spiritual, each session is collaboratively tailored to your needs in the moment.</p>
+          </div>
+          
+          <div class="bodywork-subsection">
+            <h4>The DreamBear Healing Experience</h4>
+            <p>My sessions offer a combination of therapeutic touch, intuitive energy work, and nervous system support designed to help you return to a state of harmony and inner alignment.</p>
+            <p>Clients often describe feeling lighter, more centered, and deeply grounded as if their body and spirit have been gently "reset." The work is not about chasing a quick fix, but about cultivating the safety and awareness that allow true transformation to take root.</p>
+            <p>When your body feels seen, safe, and supported, healing becomes a natural unfolding one breath, one release, one awakening at a time.</p>
           </div>
         </div>
       </div>
@@ -1159,9 +1216,9 @@
             <p>As a seasoned Bodyworker and Energy Healer with over two decades of experience, I've guided countless souls towards transformative wellness. My passion extends beyond the physical, delving deep into emotional and energetic layers to ignite the spark of healing within you.</p>
             <p>Through a holistic approach, I aim to untangle emotional and physical knots, fostering harmony between mind, body, and spirit. Central to my practice is the powerful Rice Release Technique™, liberating emotional and physical burdens trapped within the body's core. This technique grants newfound freedom and ease as past struggles dissipate.</p>
             <p>Through a holistic approach, I aim to untangle emotional and physical knots, fostering harmony between mind, body, and spirit. Central to my practice is the powerful Rice Release Technique™, liberating emotional and physical burdens trapped within the body's core. This technique grants newfound freedom and ease as past struggles dissipate.</p>
-            <p>My work isn't just about techniques—it's about creating a sacred space for each client, where vulnerability is embraced without judgment. With empathy and understanding, I accompany you on this transformative journey, honoring your unique path.</p>
-            <p>I'm dedicated to empowering you to heal yourself, and together, we peel away layers that no longer serve you, revealing your radiant essence within. If you seek more than a session—if you desire an experience that touches your soul and ignites lasting change—I invite you to join me on this healing path. Reconnect with your authentic self and unlock boundless potential.</p>
-            <p>Book a call, and together, we will chat about how to create a symphony of healing vibrations that harmonize your mind, body, and spirit. The journey to transformative wellness begins with a single step. Let's take it together.</p>
+            <p>My work isn't just about techniques it's about creating a sacred space for each client, where vulnerability is embraced without judgment. With empathy and understanding, I accompany you on this transformative journey, honoring your unique path.</p>
+            <p>I'm dedicated to empowering you to heal, grow, and reclaim your vitality. Together, we'll unlock your body's innate wisdom, guiding you towards a life of balance, joy, and purpose.</p>
+          
           </div>
         </div>
       </div>
@@ -1170,26 +1227,31 @@
     <!-- Contact Section -->
     <section class="section contact" id="contact">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">Contact Us</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Contact Information</h3>
+            <h3>Get In Touch</h3>
             <div class="contact-details">
               <div class="contact-detail">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>123 Healing Street, Wellness City, WC 12345</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>123 Healing Way, Wellness City, WC 12345</p>
+                </div>
               </div>
               <div class="contact-detail">
-                <i class="fas fa-phone-alt"></i>
-                <span> (323)-788-4960</span>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p><a href="tel:323-788-4960">Call Us Now: (323)-788-4960</a></p>
+                </div>
               </div>
               <div class="contact-detail">
                 <i class="fas fa-envelope"></i>
-                <span>info@dreambearhealing.com</span>
-              </div>
-              <div class="contact-detail">
-                <i class="fas fa-clock"></i>
-                <span>Mon - Fri: 9am - 6pm, Sat: 10am - 4pm</span>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@dreambearhealing.com</p>
+                </div>
               </div>
             </div>
             <div class="social-links">
@@ -1202,22 +1264,22 @@
           <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
-                <label for="name">Full Name</label>
+                <label for="name">Your Name</label>
                 <input type="text" id="name" class="form-control" required />
               </div>
               <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">Your Email</label>
                 <input type="email" id="email" class="form-control" required />
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" />
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" required />
               </div>
               <div class="form-group">
-                <label for="message">Your Message</label>
+                <label for="message">Message</label>
                 <textarea id="message" class="form-control" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn">Send Message</button>
             </form>
           </div>
         </div>
@@ -1229,10 +1291,10 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-column">
-            <h3>Dreambear Healing</h3>
+            <h3>DreamBear Healing</h3>
             <p>
-              Providing holistic healing services to help you achieve balance
-              and wellness in body, mind, and spirit.
+              Empowering your journey to wellness through compassionate,
+              personalized healing sessions that align body, mind, and spirit.
             </p>
           </div>
           <div class="footer-column">
@@ -1240,7 +1302,8 @@
             <ul class="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
+              <li><a href="#bodywork">Bodywork & Alignment</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#appointments">Appointments</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1252,91 +1315,68 @@
               <li><a href="#">Luxury Reset Experience</a></li>
               <li><a href="#">Rejuvenating Jade Stone Massage</a></li>
               <li><a href="#">Energetic Lavender Salt Body Scrub</a></li>
-              <li><a href="#">Chakra Balancing</a></li>
+              <li><a href="#">Mantak Chia Castor Oil Stomach Massage</a></li>
             </ul>
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2025 Dreambear Healing. All Rights Reserved.</p>
+          <p>&copy; 2024 DreamBear Healing. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
-
-    <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 class="modal-title">Book Your Session</h2>
-        <form class="modal-form" id="bookingForm">
-          <div class="form-group">
-            <label for="bookingService">Service</label>
-            <input type="text" id="bookingService" class="form-control" readonly />
-          </div>
-          <div class="form-group">
-            <label for="bookingName">Full Name</label>
-            <input type="text" id="bookingName" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label for="bookingEmail">Email Address</label>
-            <input type="email" id="bookingEmail" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label for="bookingPhone">Phone Number</label>
-            <input type="tel" id="bookingPhone" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label for="bookingDate">Preferred Date</label>
-            <input type="date" id="bookingDate" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label for="bookingTime">Preferred Time</label>
-            <select id="bookingTime" class="form-control" required>
-              <option value="">Select a time</option>
-              <option value="09:00">9:00 AM</option>
-              <option value="10:00">10:00 AM</option>
-              <option value="11:00">11:00 AM</option>
-              <option value="12:00">12:00 PM</option>
-              <option value="13:00">1:00 PM</option>
-              <option value="14:00">2:00 PM</option>
-              <option value="15:00">3:00 PM</option>
-              <option value="16:00">4:00 PM</option>
-              <option value="17:00">5:00 PM</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="bookingMessage">Additional Notes (Optional)</label>
-            <textarea id="bookingMessage" class="form-control" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submitBooking">
-            <span class="loading" id="bookingLoading"></span>
-            Book Now
-          </button>
-        </form>
-      </div>
-    </div>
 
     <!-- Back to Top Button -->
     <div class="back-to-top">
       <i class="fas fa-chevron-up"></i>
     </div>
 
+    <!-- Read More Modal -->
+    <div id="readMoreModal" class="modal read-more-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">About DreamBear Healing</h2>
+        <div class="read-more-content">
+          <h3>For People Determined to Achieve Their Goals in Pleasurable Ways</h3>
+          <p>DreamBear Healing has you covered. Tailored Sessions that Align Body Mind and Spirit with your Highest and Best 2024 Objectives.</p>
+          
+          <p>Gustavo combines decades of bodywork expertise with powerful Energy Healing skills to empower your well-being. Using the *Rice Release Technique™, he clears old, stagnant emotional and physical patterns that manifest as pain in your body. These patterns, which often lead to stress and discomfort, are transformed to create a new sense of alignment.</p>
+          
+          <p>With four years of intensive training as a Shaman, Gustavo collaborates with your Guides to empower your intentions, helping you achieve your goals with clarity and purpose.</p>
+          
+          <h3>The Rice Release Technique™</h3>
+          <p>This unique method developed by Gustavo combines gentle pressure with intuitive energy work to help the body release stored tension and trauma. Unlike traditional deep tissue work that can sometimes be painful, the Rice Release Technique™ works with the body's natural intelligence to unwind patterns of discomfort without adding additional stress.</p>
+          
+          <h3>Our Approach to Healing</h3>
+          <p>At DreamBear Healing, we believe that true wellness comes from addressing the root causes of imbalance, not just the symptoms. Our holistic approach considers the interconnectedness of body, mind, and spirit, creating a comprehensive healing experience that supports your overall well-being.</p>
+          
+          <p>Whether you're seeking relief from chronic pain, looking to reduce stress, or wanting to enhance your spiritual connection, our sessions are tailored to meet your unique needs and support your personal growth journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendly Modal -->
+    <div id="calendlyModal" class="modal calendly-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">Book Your Session</h2>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/dreambearhealing" style="min-width:320px;height:700px;"></div>
+      </div>
+    </div>
+
     <script>
       // Mobile Navigation Toggle
-      const mobileToggle = document.querySelector('.mobile-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-
-      mobileToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileToggle.innerHTML = navMenu.classList.contains('active') 
-          ? '<i class="fas fa-times"></i>' 
-          : '<i class="fas fa-bars"></i>';
+      document.querySelector('.mobile-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+        this.querySelector('i').classList.toggle('fa-bars');
+        this.querySelector('i').classList.toggle('fa-times');
       });
 
       // Close mobile menu when clicking on a link
       document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          document.querySelector('.nav-menu').classList.remove('active');
+          document.querySelector('.mobile-toggle i').classList.remove('fa-times');
+          document.querySelector('.mobile-toggle i').classList.add('fa-bars');
         });
       });
 
@@ -1366,106 +1406,105 @@
         showTestimonial(currentTestimonial);
       }, 5000);
 
-      // Booking Modal
-      const bookingModal = document.getElementById('bookingModal');
-      const bookButtons = document.querySelectorAll('.book-btn');
-      const closeModal = document.querySelector('.close-modal');
-      const bookingService = document.getElementById('bookingService');
-      const bookingForm = document.getElementById('bookingForm');
-      const submitBooking = document.getElementById('submitBooking');
-      const bookingLoading = document.getElementById('bookingLoading');
+      // Modal functionality
+      const readMoreModal = document.getElementById('readMoreModal');
+      const calendlyModal = document.getElementById('calendlyModal');
+      const readMoreBtn = document.querySelector('.read-more-btn');
+      const bookBtns = document.querySelectorAll('.book-btn');
+      const closeModalBtns = document.querySelectorAll('.close-modal');
 
-      bookButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const service = button.getAttribute('data-service');
-          bookingService.value = service;
-          bookingModal.style.display = 'block';
+      // Open Read More Modal
+      readMoreBtn.addEventListener('click', () => {
+        readMoreModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Open Calendly Modal
+      bookBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          calendlyModal.style.display = 'block';
           document.body.style.overflow = 'hidden';
         });
       });
 
-      closeModal.addEventListener('click', () => {
-        bookingModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+      // Close Modals
+      closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          readMoreModal.style.display = 'none';
+          calendlyModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        });
       });
 
+      // Close modal when clicking outside
       window.addEventListener('click', (e) => {
-        if (e.target === bookingModal) {
-          bookingModal.style.display = 'none';
+        if (e.target === readMoreModal) {
+          readMoreModal.style.display = 'none';
           document.body.style.overflow = 'auto';
         }
-      });
-
-      // Booking Form Submission
-      bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Show loading animation
-        bookingLoading.style.display = 'inline-block';
-        submitBooking.disabled = true;
-        
-        // Simulate form submission
-        setTimeout(() => {
-          bookingLoading.style.display = 'none';
-          submitBooking.disabled = false;
-          alert('Thank you for your booking! We will contact you shortly to confirm your appointment.');
-          bookingModal.style.display = 'none';
+        if (e.target === calendlyModal) {
+          calendlyModal.style.display = 'none';
           document.body.style.overflow = 'auto';
-          bookingForm.reset();
-        }, 2000);
-      });
-
-      // Contact Form Submission
-      const contactForm = document.getElementById('contactForm');
-      
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
+        }
       });
 
       // Back to Top Button
-      const backToTop = document.querySelector('.back-to-top');
+      const backToTopBtn = document.querySelector('.back-to-top');
 
       window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
-          backToTop.classList.add('visible');
+          backToTopBtn.classList.add('visible');
         } else {
-          backToTop.classList.remove('visible');
+          backToTopBtn.classList.remove('visible');
         }
       });
 
-      backToTop.addEventListener('click', () => {
+      backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
       });
 
-      // Fade in elements on scroll
+      // Form Submission
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // In a real implementation, you would send the form data to a server here
+        // For this example, we'll just show an alert
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+      });
+
+      // Scroll animations
       const fadeElements = document.querySelectorAll('.fade-in');
-      
-      const fadeInOnScroll = () => {
+
+      function checkScroll() {
         fadeElements.forEach(element => {
           const elementTop = element.getBoundingClientRect().top;
-          const elementVisible = 150;
+          const windowHeight = window.innerHeight;
           
-          if (elementTop < window.innerHeight - elementVisible) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
+          if (elementTop < windowHeight - 100) {
+            element.style.animationPlayState = 'running';
           }
         });
-      };
-      
-      window.addEventListener('scroll', fadeInOnScroll);
-      // Initial check in case elements are already in view
-      fadeInOnScroll();
+      }
 
-      // Read More Button
-      const readMoreBtn = document.querySelector('.read-more-btn');
-      
-      readMoreBtn.addEventListener('click', () => {
-        alert('More information about DreamBear Healing packages will be displayed here.');
+      window.addEventListener('scroll', checkScroll);
+      window.addEventListener('load', checkScroll);
+
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+          header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+          header.style.padding = '10px 0';
+          document.querySelector('.logo img').style.height = '100px';
+        } else {
+          header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+          header.style.padding = '15px 0';
+          document.querySelector('.logo img').style.height = '150px';
+        }
       });
     </script>
   </body>
