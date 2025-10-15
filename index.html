@@ -1,1557 +1,1551 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dreambear Healing - Holistic Wellness & Energy Healing</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Calendly widget -->
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
-    <style>
-      /* Reset and Base Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
 
-      :root {
-        --primary: #3498db; /* Sky blue primary */
-        --primary-dark: #2980b9; /* Darker blue for hover states */
-        --secondary: #f8f9fa; /* Light background */
-        --accent: #e74c3c; /* Accent color for CTAs */
-        --text: #2c3e50; /* Dark text for contrast */
-        --light: #ffffff;
-        --dark: #2c3e50;
-        --sky-light: #e1f5fe; /* Light sky blue for backgrounds */
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        --transition: all 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreambear Healing - Holistic Wellness & Energy Healing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Calendly widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    :root {
+      --primary: #3498db;
+      /* Sky blue primary */
+      --primary-dark: #2980b9;
+      /* Darker blue for hover states */
+      --secondary: #f8f9fa;
+      /* Light background */
+      --accent: #e74c3c;
+      /* Accent color for CTAs */
+      --text: #2c3e50;
+      /* Dark text for contrast */
+      --light: #ffffff;
+      --dark: #2c3e50;
+      --sky-light: #e1f5fe;
+      /* Light sky blue for backgrounds */
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
 
-      body {
-        color: var(--text);
-        line-height: 1.6;
-        background-color: var(--light);
-        overflow-x: hidden;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-        transition: var(--transition);
-      }
+    body {
+      color: var(--text);
+      line-height: 1.6;
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
 
-      ul {
-        list-style: none;
-      }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
 
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+    ul {
+      list-style: none;
+    }
 
-      .btn {
-        display: inline-block;
-        padding: 12px 30px;
-        background-color: var(--primary);
-        color: var(--light);
-        border: none;
-        border-radius: 30px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: var(--transition);
-        text-align: center;
-      }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-      .btn:hover {
-        background-color: var(--primary-dark);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-      }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--primary);
+      color: var(--light);
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
 
-      .btn-accent {
-        background-color: var(--accent);
-      }
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
 
-      .btn-accent:hover {
-        background-color: #c0392b;
-        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-      }
+    .btn-accent {
+      background-color: var(--accent);
+    }
 
-      .section {
-        padding: 80px 0;
-      }
+    .btn-accent:hover {
+      background-color: #c0392b;
+      box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    }
 
-      .section-title {
-        text-align: center;
-        margin-bottom: 50px;
-        font-size: 2.5rem;
-        color: var(--primary);
-        position: relative;
-      }
+    .section {
+      padding: 80px 0;
+    }
 
-      .section-title:after {
-        content: "";
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 3px;
-        background-color: var(--accent);
-      }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      color: var(--primary);
+      position: relative;
+    }
 
-      /* Header Styles */
-      header {
-        background-color: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        transition: var(--transition);
-      }
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent);
+    }
 
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-      }
+    /* Header Styles */
+    header {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
 
-      .logo {
-        display: flex;
-        align-items: center;
-      }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
 
-      .logo img {
-        height: 150px;
-        margin-right: 10px;
-        transition: var(--transition);
-      }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-      .logo-text {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--primary);
-      }
+    .logo img {
+      height: 150px;
+      margin-right: 10px;
+      transition: var(--transition);
+    }
 
-      .nav-menu {
-        display: flex;
-      }
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
 
-      .nav-menu li {
-        margin-left: 30px;
-      }
+    .nav-menu {
+      display: flex;
+    }
 
-      .nav-menu a {
-        font-weight: 600;
-        position: relative;
-      }
+    .nav-menu li {
+      margin-left: 30px;
+    }
 
-      .nav-menu a:after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--accent);
-        transition: width 0.3s ease;
-      }
+    .nav-menu a {
+      font-weight: 600;
+      position: relative;
+    }
 
-      .nav-menu a:hover:after {
-        width: 100%;
-      }
+    .nav-menu a:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
 
-      .mobile-toggle {
-        display: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--primary);
-      }
+    .nav-menu a:hover:after {
+      width: 100%;
+    }
 
-      /* Hero Section */
-      .hero {
-        background: linear-gradient(
-            rgba(52, 152, 219, 0.1),
-            rgba(41, 128, 185, 0.1)
-          ),
-          url(images/hero.png) no-repeat center center/cover;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: var(--light);
-        padding-top: 80px;
-      }
+    .mobile-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
 
-      .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(52, 152, 219, 0.1),
+          rgba(41, 128, 185, 0.1)),
+        url(images/hero.png) no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: var(--light);
+      padding-top: 80px;
+    }
 
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        letter-spacing: 2px;
-      }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-      .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-      }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      letter-spacing: 2px;
+    }
 
-      /* About Section */
-      .about {
-        background-color: var(--sky-light);
-      }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
 
-      .about-content {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-      }
+    /* About Section */
+    .about {
+      background-color: var(--sky-light);
+    }
 
-      .about-image {
-        flex: 1;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
-      }
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
 
-      .about-image:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-      }
+    .about-image {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
 
-      .about-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
+    .about-image:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
 
-      .about-text {
-        flex: 1;
-      }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-      .about-text h2 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-        color: var(--primary);
-      }
+    .about-text {
+      flex: 1;
+    }
 
-      .about-text p {
-        margin-bottom: 20px;
-      }
+    .about-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
 
-      /* Bodywork & Alignment Section */
-      .bodywork-section {
-        padding: 80px 0;
-        background-color: var(--secondary);
-      }
+    .about-text p {
+      margin-bottom: 20px;
+    }
 
-      .bodywork-content {
-        max-width: 900px;
-        margin: 0 auto;
-      }
+    /* Bodywork & Alignment Section */
+    .bodywork-section {
+      padding: 80px 0;
+      background-color: var(--secondary);
+    }
 
-      .bodywork-header {
-        text-align: center;
-        margin-bottom: 40px;
-      }
+    .bodywork-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-      .bodywork-header h2 {
-        font-size: 2.5rem;
-        color: var(--primary);
-        margin-bottom: 15px;
-      }
+    .bodywork-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-      .bodywork-header h3 {
-        font-size: 1.8rem;
-        color: var(--text);
-        margin-bottom: 20px;
-        font-weight: 500;
-      }
+    .bodywork-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
 
-      .divider {
-        width: 100px;
-        height: 2px;
-        background-color: var(--accent);
-        margin: 0 auto 30px;
-      }
+    .bodywork-header h3 {
+      font-size: 1.8rem;
+      color: var(--text);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
 
-      .bodywork-text {
-        margin-bottom: 40px;
-      }
+    .divider {
+      width: 100px;
+      height: 2px;
+      background-color: var(--accent);
+      margin: 0 auto 30px;
+    }
 
-      .bodywork-text p {
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-      }
+    .bodywork-text {
+      margin-bottom: 40px;
+    }
 
-      .bodywork-subsection {
-        margin-bottom: 40px;
-        padding: 30px;
-        background-color: var(--light);
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-      }
+    .bodywork-text p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
 
-      .bodywork-subsection h4 {
-        font-size: 1.5rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        text-align: center;
-      }
+    .bodywork-subsection {
+      margin-bottom: 40px;
+      padding: 30px;
+      background-color: var(--light);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
 
-      .bodywork-subsection ul {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
+    .bodywork-subsection h4 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-      .bodywork-subsection li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 20px;
-      }
+    .bodywork-subsection ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
 
-      .bodywork-subsection li:before {
-        content: "•";
-        color: var(--accent);
-        position: absolute;
-        left: 0;
-        font-size: 1.2rem;
-      }
+    .bodywork-subsection li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
 
-      /* Testimonials */
-      .testimonials {
-        background-color: var(--sky-light);
-      }
+    .bodywork-subsection li:before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
 
-      .testimonial-slider {
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-      }
+    /* Testimonials */
+    .testimonials {
+      background-color: var(--sky-light);
+    }
 
-      .testimonial {
-        background-color: var(--light);
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-        text-align: center;
-        display: none;
-        animation: fadeIn 0.8s ease;
-      }
+    .testimonial-slider {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
 
-      .testimonial.active {
-        display: block;
-      }
+    .testimonial {
+      background-color: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      display: none;
+      animation: fadeIn 0.8s ease;
+    }
 
-      .testimonial-text {
-        font-style: italic;
-        margin-bottom: 20px;
-        position: relative;
-        font-size: 1.1rem;
-      }
+    .testimonial.active {
+      display: block;
+    }
 
-      .testimonial-text:before,
-      .testimonial-text:after {
-        content: '"';
-        font-size: 3rem;
-        color: var(--accent);
-        position: absolute;
-        opacity: 0.3;
-      }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+      font-size: 1.1rem;
+    }
 
-      .testimonial-text:before {
-        top: -20px;
-        left: -10px;
-      }
+    .testimonial-text:before,
+    .testimonial-text:after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--accent);
+      position: absolute;
+      opacity: 0.3;
+    }
 
-      .testimonial-text:after {
-        bottom: -40px;
-        right: -10px;
-      }
+    .testimonial-text:before {
+      top: -20px;
+      left: -10px;
+    }
 
-      .testimonial-author {
-        font-weight: 600;
-        color: var(--primary);
-        font-size: 1.1rem;
-      }
+    .testimonial-text:after {
+      bottom: -40px;
+      right: -10px;
+    }
 
-      .slider-controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        gap: 10px;
-      }
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
 
-      .slider-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #ccc;
-        cursor: pointer;
-        transition: var(--transition);
-      }
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
 
-      .slider-dot.active {
-        background-color: var(--primary);
-        transform: scale(1.2);
-      }
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+      transition: var(--transition);
+    }
 
-      /* Appointments Section */
-      .appointments {
-        padding: 80px 0;
-        background-color: var(--secondary);
-      }
+    .slider-dot.active {
+      background-color: var(--primary);
+      transform: scale(1.2);
+    }
 
-      .appointments-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Appointments Section */
+    .appointments {
+      padding: 80px 0;
+      background-color: var(--secondary);
+    }
+
+    .appointments-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .appointment-card {
+      background-color: var(--light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 5px solid var(--primary);
+    }
+
+    .appointment-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
+    }
+
+    .service-info {
+      margin-bottom: 20px;
+    }
+
+    .service-info img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .service-name {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .service-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .duration,
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .duration i,
+    .price i {
+      color: var(--accent);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--light);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* Gustavo Section */
+
+    /* Gustavo Section with Video */
+    .gustavo-container {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gustavo-video {
+      flex: 1;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+
+    .gustavo-video:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(52, 152, 219, 0.15);
+    }
+
+    .gustavo-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .video-caption {
+      background: linear-gradient(135deg,
+          var(--primary),
+          var(--primary-dark));
+      color: var(--light);
+      padding: 15px 20px;
+      text-align: center;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .video-caption p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .gustavo-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    /* Responsive design for video */
+    @media (max-width: 992px) {
+      .gustavo-container {
+        flex-direction: column;
         gap: 30px;
       }
 
-      .appointment-card {
-        background-color: var(--light);
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: var(--transition);
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-top: 5px solid var(--primary);
-      }
-
-      .appointment-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
-      }
-
-      .service-info {
-        margin-bottom: 20px;
-      }
-
-      .service-info img {
+      .gustavo-video,
+      .gustavo-text {
+        flex: none;
         width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 15px;
-      }
-
-      .service-name {
-        font-size: 1.3rem;
-        color: var(--primary);
-        margin-bottom: 15px;
-      }
-
-      .service-details {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-      }
-
-      .duration,
-      .price {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .duration i,
-      .price i {
-        color: var(--accent);
-      }
-
-      .btn-primary {
-        background-color: var(--primary);
-        color: var(--light);
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: var(--transition);
-        text-align: center;
-        display: block;
-        width: 100%;
-      }
-
-      .btn-primary:hover {
-        background-color: var(--primary-dark);
-      }
-
-      /* Gustavo Section */
-
-      /* Gustavo Section with Video */
-      .gustavo-container {
-        display: flex;
-        gap: 50px;
-        align-items: flex-start;
-        max-width: 1000px;
-        margin: 0 auto;
       }
 
       .gustavo-video {
-        flex: 1;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
+        max-width: 500px;
+        margin: 0 auto;
       }
+    }
 
-      .gustavo-video:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(52, 152, 219, 0.15);
-      }
-
-      .gustavo-video video {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 15px 15px 0 0;
-      }
-
-      .video-caption {
-        background: linear-gradient(
-          135deg,
-          var(--primary),
-          var(--primary-dark)
-        );
-        color: var(--light);
-        padding: 15px 20px;
-        text-align: center;
-        border-radius: 0 0 15px 15px;
+    @media (max-width: 768px) {
+      .gustavo-video {
+        max-width: 100%;
       }
 
       .video-caption p {
-        margin: 0;
-        font-weight: 600;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
+    }
 
-      .gustavo-text {
-        flex: 1;
-        text-align: left;
-      }
+    /* Video loading state */
+    .gustavo-video video {
+      background: var(--sky-light);
+      min-height: 300px;
+    }
 
-      /* Responsive design for video */
-      @media (max-width: 992px) {
-        .gustavo-container {
-          flex-direction: column;
-          gap: 30px;
-        }
+    /* Optional: Add play button overlay */
+    .gustavo-video {
+      position: relative;
+    }
 
-        .gustavo-video,
-        .gustavo-text {
-          flex: none;
-          width: 100%;
-        }
+    .gustavo-video::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      background: rgba(52, 152, 219, 0.1);
+      border-radius: 15px 15px 0 0;
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 1;
+    }
 
-        .gustavo-video {
-          max-width: 500px;
-          margin: 0 auto;
-        }
-      }
+    .gustavo-video:hover::before {
+      opacity: 1;
+    }
 
-      @media (max-width: 768px) {
-        .gustavo-video {
-          max-width: 100%;
-        }
+    .gustavo-section {
+      padding: 80px 0;
+      background-color: var(--sky-light);
+    }
 
-        .video-caption p {
-          font-size: 1rem;
-        }
-      }
+    .gustavo-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-      /* Video loading state */
-      .gustavo-video video {
-        background: var(--sky-light);
-        min-height: 300px;
-      }
+    .gustavo-header {
+      margin-bottom: 40px;
+    }
 
-      /* Optional: Add play button overlay */
-      .gustavo-video {
-        position: relative;
-      }
+    .gustavo-header h4 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
 
-      .gustavo-video::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 60px);
-        background: rgba(52, 152, 219, 0.1);
-        border-radius: 15px 15px 0 0;
+    .line {
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent);
+      margin: 0 auto;
+    }
+
+    .gustavo-text {
+      text-align: left;
+    }
+
+    .gustavo-text p {
+      margin-bottom: 20px;
+    }
+
+    .imgText {
+      background-image: url('images/fullimg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+    .imgTextT{
+      padding: 10px;
+      background-color: var(--primary);
+      
+    }
+
+    /* Contact Section */
+    .contact-content {
+      display: flex;
+      gap: 50px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .contact-details {
+      margin-bottom: 30px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .contact-detail i {
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: var(--light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      flex: 1;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 60px 0 30px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .footer-column {
+      flex: 1;
+      margin-right: 30px;
+    }
+
+    .footer-column:last-child {
+      margin-right: 0;
+    }
+
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 2000;
+      overflow-y: auto;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: var(--light);
+      margin: 5% auto;
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from {
         opacity: 0;
-        transition: var(--transition);
-        z-index: 1;
+        transform: translateY(-50px);
       }
 
-      .gustavo-video:hover::before {
+      to {
         opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .close-modal:hover {
+      color: var(--accent);
+    }
+
+    .modal-title {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .modal-form {
+      margin-top: 20px;
+    }
+
+    /* Animation Classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* New Animations */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
       }
 
-      .gustavo-section {
-        padding: 80px 0;
-        background-color: var(--sky-light);
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .floating {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
       }
 
-      .gustavo-content {
-        display: flex;
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* Read More Modal Styles */
+    .read-more-modal .modal-content {
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .read-more-content h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .read-more-content p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    /* Calendly Modal Styles */
+    .calendly-modal .modal-content {
+      max-width: 1000px;
+      height: 80vh;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .calendly-inline-widget {
+      height: 100%;
+      min-height: 650px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+
+      .about-content,
+      .contact-content {
+        flex-direction: column;
+      }
+
+      .about-image,
+      .about-text,
+      .contact-info,
+      .contact-form {
+        flex: none;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--light);
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        max-width: 900px;
-        margin: 0 auto;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
-      .gustavo-header {
-        margin-bottom: 40px;
+      .nav-menu.active {
+        left: 0;
       }
 
-      .gustavo-header h4 {
-        font-size: 1.5rem;
-        color: var(--primary);
-        margin-bottom: 15px;
+      .nav-menu li {
+        margin: 0 0 30px 0;
       }
 
-      .line {
-        width: 80px;
-        height: 3px;
-        background-color: var(--accent);
-        margin: 0 auto;
-      }
-
-      .gustavo-text {
-        text-align: left;
-      }
-
-      .gustavo-text p {
-        margin-bottom: 20px;
-      }
-      .imgText{
-        background-image: url('images/fullimg.jpg');
-        background-size: cover;          
-  background-repeat: no-repeat;    
-  background-position: center;
-
-      }
-
-      /* Contact Section */
-      .contact-content {
-        display: flex;
-        gap: 50px;
-      }
-
-      .contact-info {
-        flex: 1;
-      }
-
-      .contact-info h3 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        color: var(--primary);
-      }
-
-      .contact-details {
-        margin-bottom: 30px;
-      }
-
-      .contact-detail {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-      }
-
-      .contact-detail i {
-        width: 40px;
-        height: 40px;
-        background-color: var(--primary);
-        color: var(--light);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        flex-shrink: 0;
-      }
-
-      .contact-form {
-        flex: 1;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-group label {
+      .mobile-toggle {
         display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
       }
 
-      .form-control {
-        width: 100%;
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-        transition: var(--transition);
+      .hero h1 {
+        font-size: 2.5rem;
       }
 
-      .form-control:focus {
-        border-color: var(--primary);
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      .section-title {
+        font-size: 2rem;
       }
 
-      textarea.form-control {
-        min-height: 150px;
-        resize: vertical;
+      .bodywork-header h2 {
+        font-size: 2rem;
       }
 
-      /* Footer */
-      footer {
-        background-color: var(--dark);
-        color: var(--light);
-        padding: 60px 0 30px;
+      .bodywork-header h3 {
+        font-size: 1.5rem;
       }
 
       .footer-content {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
+        flex-direction: column;
       }
 
       .footer-column {
-        flex: 1;
-        margin-right: 30px;
-      }
-
-      .footer-column:last-child {
         margin-right: 0;
+        margin-bottom: 30px;
       }
 
-      .footer-column h3 {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        color: var(--primary);
-      }
-
-      .footer-links li {
-        margin-bottom: 10px;
-      }
-
-      .footer-links a:hover {
-        color: var(--accent);
-      }
-
-      .social-links {
-        display: flex;
-        gap: 15px;
-      }
-
-      .social-link {
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-      }
-
-      .social-link:hover {
-        background-color: var(--primary);
-        transform: translateY(-3px);
-      }
-
-      .copyright {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      /* Modal Styles */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 2000;
-        overflow-y: auto;
-        animation: fadeIn 0.3s ease;
-      }
-
-      .modal-content {
-        position: relative;
-        background-color: var(--light);
-        margin: 5% auto;
-        padding: 30px;
-        width: 90%;
-        max-width: 600px;
-        border-radius: 10px;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        animation: modalFadeIn 0.3s ease;
-      }
-
-      @keyframes modalFadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .close-modal {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--text);
-        transition: var(--transition);
-      }
-
-      .close-modal:hover {
-        color: var(--accent);
-      }
-
-      .modal-title {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .modal-form {
-        margin-top: 20px;
-      }
-
-      /* Animation Classes */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.8s ease forwards;
-      }
-
-      .delay-1 {
-        animation-delay: 0.2s;
-      }
-
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Back to Top Button */
       .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background-color: var(--primary);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        z-index: 999;
+        bottom: 20px;
+        right: 20px;
       }
 
-      .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .back-to-top:hover {
-        background-color: var(--primary-dark);
-        transform: translateY(-3px);
-      }
-
-      /* Loading Animation */
-      .loading {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
-        margin-right: 10px;
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* New Animations */
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .floating {
-        animation: float 5s ease-in-out infinite;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      .pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      /* Read More Modal Styles */
-      .read-more-modal .modal-content {
-        max-width: 800px;
-        max-height: 80vh;
-        overflow-y: auto;
-      }
-
-      .read-more-content h3 {
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-size: 1.8rem;
-      }
-
-      .read-more-content p {
-        margin-bottom: 15px;
-        line-height: 1.7;
-      }
-
-      /* Calendly Modal Styles */
       .calendly-modal .modal-content {
-        max-width: 1000px;
-        height: 80vh;
-        padding: 20px;
-        overflow: hidden;
+        height: 70vh;
       }
+    }
+  </style>
+</head>
 
-      .calendly-inline-widget {
-        height: 100%;
-        min-height: 650px;
-      }
-
-      /* Responsive Styles */
-      @media (max-width: 992px) {
-        .about-content,
-        .contact-content {
-          flex-direction: column;
-        }
-
-        .about-image,
-        .about-text,
-        .contact-info,
-        .contact-form {
-          flex: none;
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .nav-menu {
-          position: fixed;
-          top: 80px;
-          left: -100%;
-          width: 100%;
-          height: calc(100vh - 80px);
-          background-color: var(--light);
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding-top: 50px;
-          transition: left 0.3s ease;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-menu.active {
-          left: 0;
-        }
-
-        .nav-menu li {
-          margin: 0 0 30px 0;
-        }
-
-        .mobile-toggle {
-          display: block;
-        }
-
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .section-title {
-          font-size: 2rem;
-        }
-
-        .bodywork-header h2 {
-          font-size: 2rem;
-        }
-
-        .bodywork-header h3 {
-          font-size: 1.5rem;
-        }
-
-        .footer-content {
-          flex-direction: column;
-        }
-
-        .footer-column {
-          margin-right: 0;
-          margin-bottom: 30px;
-        }
-
-        .back-to-top {
-          bottom: 20px;
-          right: 20px;
-        }
-
-        .calendly-modal .modal-content {
-          height: 70vh;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container header-container">
-        <div class="logo">
-          <img src="images/logo.png" alt="Dreambear Healing Logo" />
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Dreambear Healing Logo" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#bodywork">Bodywork & Alignment</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#appointments">Appointments</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
         </div>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#bodywork">Bodywork & Alignment</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#appointments">Appointments</a></li>
-            <li><a href="#contact">Contact</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <p class="floating">Alignment Specialist</p>
+        <h1 class="pulse">RELEASE RESET RENEW</h1>
+        <a href="#contact" class="btn">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title">About DreamBear Healing</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="images/topLeft.png" alt="Healing practitioner" />
+        </div>
+        <div class="about-text">
+          <h3>
+            For people determine to achieve their holistic wellness goals for a higher quality of life.
+          </h3>
+          <p>
+            DreamBear Healing has you covered. Tailored Sessions that Align
+            Body Mind and Spirit with how your next grandest version of you feels.
+          </p>
+          <p>
+            Gustavo combines decades of bodywork expertise with powerful
+            Energy Healing skills to empower your well-being. Using the *Rice
+            Release Technique™, he clears old, stagnant emotional and physical
+            patterns that manifest as pain in your body. These patterns, which
+            often lead to stress and discomfort, are transformed to create a
+            new sense of alignment
+          </p>
+          <p>
+            With four years of intensive training as a Shaman, Gustavo
+            collaborates with your Guides to empower your intentions, helping
+            you achieve your goals with clarity and purpose.
+          </p>
+          <button class="btn read-more-btn">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bodywork & Alignment Section -->
+  <section id="bodywork" class="section bodywork-section">
+    <div class="container">
+      <div class="bodywork-content">
+        <div class="bodywork-header">
+          <h2>Bodywork & Alignment Specialist</h2>
+          <h3>Reset Your Life with Safety, Presence, and Deep Care</h3>
+          <div class="divider"></div>
+        </div>
+        <div class="bodywork-text">
+          <p>
+            When your body is ready for resolution, healing begins gently at
+            your own pace.
+          </p>
+          <p>
+            I'm an energy-sensitive healing facilitator with decades of
+            experience in bodywork, energetic healing, and intuitive alignment
+            work. Since the early days of the Covid era, I've been immersed in
+            an intensive spiritual apprenticeship with internationally
+            respected shaman AnkRa JOY, a master alchemist who has guided and
+            trained healers worldwide for over forty years.
+          </p>
+          <p>
+            Working under her mentorship has transformed both my personal and
+            professional path, refining my ability to hold safe, grounded, and
+            compassionate space for others. My approach is built on the
+            understanding that the body carries its own intelligence and when
+            we learn to listen deeply, healing unfolds naturally.
+          </p>
+        </div>
+
+        <div class="bodywork-subsection">
+          <h4>A Trauma-Informed Approach</h4>
+          <p>
+            At DreamBear Healing, every session begins with safety and
+            consent. Together, we take time to ground, connect, and set
+            intentions so that your body and nervous system feel supported.
+          </p>
+          <p>
+            I never force or push the body instead, I invite it to release
+            what it's ready to let go of. The work is designed to reduce pain
+            without adding pain, gently unwinding stored tension and energy so
+            your body can find its own balance and rhythm again.
+          </p>
+          <p>
+            Many people carry long-held physical or emotional pain patterns
+            that quietly diminish their quality of life. My role is to help
+            you reconnect to your body's wisdom and create the conditions for
+            authentic, sustainable healing.
+          </p>
+        </div>
+
+        <div class="bodywork-subsection">
+          <h4>Who This Work Supports</h4>
+          <p>
+            Clients who benefit most from my work often fall into one or more
+            of these categories:
+          </p>
+          <ul>
+            <li>
+              Those experiencing chronic or persistent pain who are ready to
+              release the emotional and energetic layers contributing to it.
+            </li>
+            <li>
+              Individuals on a healing or spiritual journey who've done deep
+              inner work yet feel an energetic "block" or stagnation showing
+              up in the body.
+            </li>
+            <li>
+              People seeking deep relaxation and nervous system restoration
+              through extended sessions that provide peace, clarity, and
+              rejuvenation.
+            </li>
           </ul>
-          <div class="mobile-toggle">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
-      </div>
-    </header>
+          <p>
+            Whether your focus is physical, emotional, or spiritual, each
+            session is collaboratively tailored to your needs in the moment.
+          </p>
+        </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <p class="floating">Alignment Specialist</p>
-          <h1 class="pulse">RELEASE RESET RENEW</h1>
-          <a href="#contact" class="btn">Book a Session</a>
+        <div class="bodywork-subsection">
+          <h4>The DreamBear Healing Experience</h4>
+          <p>
+            My sessions offer a combination of therapeutic touch, intuitive
+            energy work, and nervous system support designed to help you
+            return to a state of harmony and inner alignment.
+          </p>
+          <p>
+            Clients often describe feeling lighter, more centered, and deeply
+            grounded as if their body and spirit have been gently "reset." The
+            work is not about chasing a quick fix, but about cultivating the
+            safety and awareness that allow true transformation to take root.
+          </p>
+          <p>
+            When your body feels seen, safe, and supported, healing becomes a
+            natural unfolding one breath, one release, one awakening at a
+            time.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-      <div class="container">
-        <h2 class="section-title">About DreamBear Healing</h2>
-        <div class="about-content">
-          <div class="about-image">
-            <img src="images/topLeft.png" alt="Healing practitioner" />
+  <!-- Testimonials Section -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Type of clients</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <div class="testimonial-text">
+            <h4>Best for seekers looking to:</h4>
+            <p>
+              Experience profound relief as deep-seated pain is gently
+              released, liberating you from its burdensome grip.
+            </p>
           </div>
-          <div class="about-text">
-            <h3>
-              For people determine to achieve their holistic wellness goals for a higher quality of life.
+          <div class="testimonial-author">Author</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <h4>Best for seekers looking to:</h4>
+            <p>
+              Feel a sense of calm and balance as your nervous system is
+              reset, restoring harmony and tranquility to your entire being.
+            </p>
+          </div>
+          <div class="testimonial-author">Author</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <h4>Best for seekers looking to:</h4>
+            <p>
+              Embark on a journey of accelerated healing, where transformative
+              work takes place without unnecessary suffering, allowing you to
+              embrace growth with ease and grace.
+            </p>
+          </div>
+          <div class="testimonial-author">Author</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <h4>Best for seekers looking to:</h4>
+            <p>
+              Step into a judgement-free zone, where you are fully accepted
+              and supported, empowering you to explore your emotions and
+              vulnerabilities without fear of criticism.
+            </p>
+          </div>
+          <div class="testimonial-author">Author</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            <h4>Best for seekers looking to:</h4>
+            <p>
+              Together, co-create a safe container where healing flourishes,
+              and your true essence can shine, free from fear and physical
+              restriction.
+            </p>
+          </div>
+          <div class="testimonial-author">Author</div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-dot active" data-index="0"></div>
+          <div class="slider-dot" data-index="1"></div>
+          <div class="slider-dot" data-index="2"></div>
+          <div class="slider-dot" data-index="3"></div>
+          <div class="slider-dot" data-index="4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointments Section -->
+  <section id="appointments" class="appointments">
+    <div class="container">
+      <h2 class="section-title">ONLINE APPOINTMENTS</h2>
+      <div class="appointments-list">
+        <div class="appointment-card fade-in">
+          <div class="service-info">
+            <img src="images/onel.png" alt="Body Reset Session" />
+            <h3 class="service-name">Advanced Energetic Acupressure Session: Alleviates Pain</h3>
+            <div class="service-details">
+              <span class="duration">
+                <i class="fas fa-clock"></i>
+                1 hr 30 mins
+              </span>
+              <span class="price">
+                <i class="fas fa-gem"></i>
+                $222
+              </span>
+            </div>
+          </div>
+          <a href="https://calendly.com/dream2heal-un4x/advanced-energetic-acupressure-session?back=1&month=2025-10"><button
+              class="btn btn-primary book-btn" data-service="Body Reset Session">
+              BOOK
+            </button></a>
+
+        </div>
+
+        <div class="appointment-card fade-in delay-1">
+          <div class="service-info">
+            <img src="images/twol.png" alt="Luxury Reset Experience" />
+            <h3 class="service-name">Body Reset Session: Alleviates Pain & Deeply Relaxing</h3>
+            <div class="service-details">
+              <span class="duration">
+                <i class="fas fa-clock"></i>
+                2 hrs
+              </span>
+              <span class="price">
+                <i class="fas fa-gem"></i>
+                $444
+              </span>
+            </div>
+          </div>
+          <a
+            href="https://calendly.com/dream2heal-un4x/body-reset-session-alleviates-pain-extra-relaxing?back=1&month=2025-10"><button
+              class="btn btn-primary book-btn" data-service="Luxury Reset Experience">
+              BOOK
+            </button></a>
+
+        </div>
+
+        <div class="appointment-card fade-in delay-2">
+          <div class="service-info">
+            <img src="images/threel.png" alt="Rejuvenating Jade Stone Massage" />
+            <h3 class="service-name">Hot & Cold Jade Stone Session: Deep Tension Relief</h3>
+            <div class="service-details">
+              <span class="duration">
+                <i class="fas fa-clock"></i>
+                1 hr 30 mins
+              </span>
+              <span class="price">
+                <i class="fas fa-gem"></i>
+                $222
+              </span>
+            </div>
+          </div>
+          <a href="https://calendly.com/dream2heal-un4x/hot-cold-jade-stone-session?back=1"><button
+              class="btn btn-primary book-btn" data-service="Rejuvenating Jade Stone Massage">
+              BOOK
+            </button></a>
+
+        </div>
+        <div class="appointment-card fade-in delay-1">
+          <div class="service-info">
+            <img src="images/fourl.png" alt="Energy Healing Session" />
+            <h3 class="service-name">Blissful Lavender Salt Scrub: Holistic Cleanse</h3>
+            <div class="service-details">
+              <span class="duration">
+                <i class="fas fa-clock"></i>
+                1 hr
+              </span>
+              <span class="price">
+                <i class="fas fa-gem"></i>
+                $180
+              </span>
+            </div>
+          </div>
+          <a href="https://calendly.com/dream2heal-un4x/blissful-lavender-salt-scrub-holistic-cleanse?back=1"><button
+              class="btn btn-primary book-btn" data-service="Energy Healing Session">
+              BOOK
+            </button></a>
+
+        </div>
+
+        <div class="appointment-card fade-in delay-2">
+          <div class="service-info">
+            <img src="images/fivel.png" alt="Chakra Balancing" />
+            <h3 class="service-name">
+              Mantak Chia Castor Oil Stomach Relief Session: Soothing
             </h3>
-            <p>
-              DreamBear Healing has you covered. Tailored Sessions that Align
-              Body Mind and Spirit with how your next grandest version of you feels.
-            </p>
-            <p>
-              Gustavo combines decades of bodywork expertise with powerful
-              Energy Healing skills to empower your well-being. Using the *Rice
-              Release Technique™, he clears old, stagnant emotional and physical
-              patterns that manifest as pain in your body. These patterns, which
-              often lead to stress and discomfort, are transformed to create a
-              new sense of alignment
-            </p>
-            <p>
-              With four years of intensive training as a Shaman, Gustavo
-              collaborates with your Guides to empower your intentions, helping
-              you achieve your goals with clarity and purpose.
-            </p>
-            <button class="btn read-more-btn">Read More</button>
+            <div class="service-details">
+              <span class="duration">
+                <i class="fas fa-clock"></i>
+                45 mins
+              </span>
+              <span class="price">
+                <i class="fas fa-gem"></i>
+                $200
+              </span>
+            </div>
           </div>
+          <a href="https://calendly.com/dream2heal-un4x/mantak-chia-castor-oil-stomach-relief-session-soothing?back=1"><button
+              class="btn btn-primary book-btn" data-service="Chakra Balancing">
+              BOOK
+            </button></a>
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bodywork & Alignment Section -->
-    <section id="bodywork" class="section bodywork-section">
-      <div class="container">
-        <div class="bodywork-content">
-          <div class="bodywork-header">
-            <h2>Bodywork & Alignment Specialist</h2>
-            <h3>Reset Your Life with Safety, Presence, and Deep Care</h3>
-            <div class="divider"></div>
+  <!-- Gustavo Section -->
+  <!-- Gustavo Section -->
+  <section class="section gustavo-section">
+    <div class="container">
+      <h2 class="section-title">Gustavo de la Torre</h2>
+      <div class="gustavo-content">
+        <div class="gustavo-header">
+          <h4>Caring For Your Wellbeing</h4>
+          <div class="line"></div>
+        </div>
+        <div class="gustavo-container">
+          <div class="gustavo-video">
+            <video controls poster="images/video-preview.jpg">
+              <source src="videos/gustavo-intro.mp4" type="video/mp4" />
+              <source src="videos/gustavo-intro.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-caption">
+              <p>Gustavo - Your Healing Guide</p>
+            </div>
           </div>
-          <div class="bodywork-text">
+          <div class="gustavo-text">
             <p>
-              When your body is ready for resolution, healing begins gently at
-              your own pace.
+              Step into the world of profound healing with, Gustavo de la
+              Torre, aka "DreamBear"—a name bestowed upon me by an elder,
+              symbolizing my spiritual journey.
             </p>
             <p>
-              I'm an energy-sensitive healing facilitator with decades of
-              experience in bodywork, energetic healing, and intuitive alignment
-              work. Since the early days of the Covid era, I've been immersed in
-              an intensive spiritual apprenticeship with internationally
-              respected shaman AnkRa JOY, a master alchemist who has guided and
-              trained healers worldwide for over forty years.
+              As a seasoned Bodyworker and Energy Healer with over two decades
+              of experience, I've guided countless souls towards
+              transformative wellness. My passion extends beyond the physical,
+              delving deep into emotional and energetic layers to ignite the
+              spark of healing within you.
             </p>
             <p>
-              Working under her mentorship has transformed both my personal and
-              professional path, refining my ability to hold safe, grounded, and
-              compassionate space for others. My approach is built on the
-              understanding that the body carries its own intelligence and when
-              we learn to listen deeply, healing unfolds naturally.
-            </p>
-          </div>
-
-          <div class="bodywork-subsection">
-            <h4>A Trauma-Informed Approach</h4>
-            <p>
-              At DreamBear Healing, every session begins with safety and
-              consent. Together, we take time to ground, connect, and set
-              intentions so that your body and nervous system feel supported.
+              Through a holistic approach, I aim to untangle emotional and
+              physical knots, fostering harmony between mind, body, and
+              spirit. Central to my practice is the powerful Rice Release
+              Technique™, liberating emotional and physical burdens trapped
+              within the body's core. This technique grants newfound freedom
+              and ease as past struggles dissipate.
             </p>
             <p>
-              I never force or push the body instead, I invite it to release
-              what it's ready to let go of. The work is designed to reduce pain
-              without adding pain, gently unwinding stored tension and energy so
-              your body can find its own balance and rhythm again.
+              My work isn't just about techniques—it's about creating a sacred
+              space for each client, where vulnerability is embraced without
+              judgment. With empathy and understanding, I accompany you on
+              this transformative journey, honoring your unique path.
             </p>
             <p>
-              Many people carry long-held physical or emotional pain patterns
-              that quietly diminish their quality of life. My role is to help
-              you reconnect to your body's wisdom and create the conditions for
-              authentic, sustainable healing.
-            </p>
-          </div>
-
-          <div class="bodywork-subsection">
-            <h4>Who This Work Supports</h4>
-            <p>
-              Clients who benefit most from my work often fall into one or more
-              of these categories:
-            </p>
-            <ul>
-              <li>
-                Those experiencing chronic or persistent pain who are ready to
-                release the emotional and energetic layers contributing to it.
-              </li>
-              <li>
-                Individuals on a healing or spiritual journey who've done deep
-                inner work yet feel an energetic "block" or stagnation showing
-                up in the body.
-              </li>
-              <li>
-                People seeking deep relaxation and nervous system restoration
-                through extended sessions that provide peace, clarity, and
-                rejuvenation.
-              </li>
-            </ul>
-            <p>
-              Whether your focus is physical, emotional, or spiritual, each
-              session is collaboratively tailored to your needs in the moment.
-            </p>
-          </div>
-
-          <div class="bodywork-subsection">
-            <h4>The DreamBear Healing Experience</h4>
-            <p>
-              My sessions offer a combination of therapeutic touch, intuitive
-              energy work, and nervous system support designed to help you
-              return to a state of harmony and inner alignment.
-            </p>
-            <p>
-              Clients often describe feeling lighter, more centered, and deeply
-              grounded as if their body and spirit have been gently "reset." The
-              work is not about chasing a quick fix, but about cultivating the
-              safety and awareness that allow true transformation to take root.
-            </p>
-            <p>
-              When your body feels seen, safe, and supported, healing becomes a
-              natural unfolding one breath, one release, one awakening at a
-              time.
+              I'm dedicated to empowering you to heal, grow, and reclaim your
+              vitality. Together, we'll unlock your body's innate wisdom,
+              guiding you towards a life of balance, joy, and purpose.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <h2 class="section-title">Type of clients</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial active">
-            <div class="testimonial-text">
-              <h4>Best for seekers looking to:</h4>
-              <p>
-                Experience profound relief as deep-seated pain is gently
-                released, liberating you from its burdensome grip.
-              </p>
-            </div>
-            <div class="testimonial-author">Author</div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-text">
-              <h4>Best for seekers looking to:</h4>
-              <p>
-                Feel a sense of calm and balance as your nervous system is
-                reset, restoring harmony and tranquility to your entire being.
-              </p>
-            </div>
-            <div class="testimonial-author">Author</div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-text">
-              <h4>Best for seekers looking to:</h4>
-              <p>
-                Embark on a journey of accelerated healing, where transformative
-                work takes place without unnecessary suffering, allowing you to
-                embrace growth with ease and grace.
-              </p>
-            </div>
-            <div class="testimonial-author">Author</div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-text">
-              <h4>Best for seekers looking to:</h4>
-              <p>
-                Step into a judgement-free zone, where you are fully accepted
-                and supported, empowering you to explore your emotions and
-                vulnerabilities without fear of criticism.
-              </p>
-            </div>
-            <div class="testimonial-author">Author</div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-text">
-              <h4>Best for seekers looking to:</h4>
-              <p>
-                Together, co-create a safe container where healing flourishes,
-                and your true essence can shine, free from fear and physical
-                restriction.
-              </p>
-            </div>
-            <div class="testimonial-author">Author</div>
-          </div>
-          <div class="slider-controls">
-            <div class="slider-dot active" data-index="0"></div>
-            <div class="slider-dot" data-index="1"></div>
-            <div class="slider-dot" data-index="2"></div>
-            <div class="slider-dot" data-index="3"></div>
-            <div class="slider-dot" data-index="4"></div>
-          </div>
+
+  <!-- Testimonial sect -->
+  <section class="section gustavo-section">
+    <div class="container">
+      <h2 class="section-title">Gustavo </h2>
+      <div class="gustavo-content">
+        <div class="gustavo-header">
+          <h4>What People say about Us</h4>
+          <div class="line"></div>
         </div>
-      </div>
-    </section>
+        <div class="gustavo-container imgText">
 
-    <!-- Appointments Section -->
-    <section id="appointments" class="appointments">
-      <div class="container">
-        <h2 class="section-title">ONLINE APPOINTMENTS</h2>
-        <div class="appointments-list">
-          <div class="appointment-card fade-in">
-            <div class="service-info">
-              <img src="images/onel.png" alt="Body Reset Session" />
-              <h3 class="service-name">Advanced Energetic Acupressure Session: Alleviates Pain</h3>
-              <div class="service-details">
-                <span class="duration">
-                  <i class="fas fa-clock"></i>
-                  1 hr 30 mins
-                </span>
-                <span class="price">
-                  <i class="fas fa-gem"></i>
-                  $222
-                </span>
-              </div>
-            </div>
-            <a href="https://calendly.com/dream2heal-un4x/advanced-energetic-acupressure-session?back=1&month=2025-10"><button
-              class="btn btn-primary book-btn"
-              data-service="Body Reset Session"
-            >
-              BOOK
-            </button></a>
-            
+          <div class="gustavo-text imgTextT">
+            <p>
+              Step into the world of profound healing with, Gustavo de la
+              Torre, aka "DreamBear"—a name bestowed upon me by an elder,
+              symbolizing my spiritual journey.
+            </p>
+            <p>
+              As a seasoned Bodyworker and Energy Healer with over two decades
+              of experience, I've guided countless souls towards
+              transformative wellness. My passion extends beyond the physical,
+              delving deep into emotional and energetic layers to ignite the
+              spark of healing within you.
+            </p>
+            <p>
+              Through a holistic approach, I aim to untangle emotional and
+              physical knots, fostering harmony between mind, body, and
+              spirit. Central to my practice is the powerful Rice Release
+              Technique™, liberating emotional and physical burdens trapped
+              within the body's core. This technique grants newfound freedom
+              and ease as past struggles dissipate.
+            </p>
+            <p>
+              My work isn't just about techniques—it's about creating a sacred
+              space for each client, where vulnerability is embraced without
+              judgment. With empathy and understanding, I accompany you on
+              this transformative journey, honoring your unique path.
+            </p>
+            <p>
+              I'm dedicated to empowering you to heal, grow, and reclaim your
+              vitality. Together, we'll unlock your body's innate wisdom,
+              guiding you towards a life of balance, joy, and purpose.
+            </p>
           </div>
-
-          <div class="appointment-card fade-in delay-1">
-            <div class="service-info">
-              <img src="images/twol.png" alt="Luxury Reset Experience" />
-              <h3 class="service-name">Body Reset Session: Alleviates Pain & Deeply Relaxing</h3>
-              <div class="service-details">
-                <span class="duration">
-                  <i class="fas fa-clock"></i>
-                  2 hrs
-                </span>
-                <span class="price">
-                  <i class="fas fa-gem"></i>
-                  $444
-                </span>
-              </div>
-            </div>
-            <a href="https://calendly.com/dream2heal-un4x/body-reset-session-alleviates-pain-extra-relaxing?back=1&month=2025-10"><button
-              class="btn btn-primary book-btn"
-              data-service="Luxury Reset Experience"
-            >
-              BOOK
-            </button></a>
-            
-          </div>
-
-          <div class="appointment-card fade-in delay-2">
-            <div class="service-info">
-              <img
-                src="images/threel.png"
-                alt="Rejuvenating Jade Stone Massage"
-              />
-              <h3 class="service-name">Hot & Cold Jade Stone Session: Deep Tension Relief</h3>
-              <div class="service-details">
-                <span class="duration">
-                  <i class="fas fa-clock"></i>
-                  1 hr 30 mins
-                </span>
-                <span class="price">
-                  <i class="fas fa-gem"></i>
-                  $222
-                </span>
-              </div>
-            </div>
-            <a href="https://calendly.com/dream2heal-un4x/hot-cold-jade-stone-session?back=1"><button
-              class="btn btn-primary book-btn"
-              data-service="Rejuvenating Jade Stone Massage"
-            >
-              BOOK
-            </button></a>
-            
-          </div>
-          <div class="appointment-card fade-in delay-1">
-            <div class="service-info">
-              <img src="images/fourl.png" alt="Energy Healing Session" />
-              <h3 class="service-name">Blissful Lavender Salt Scrub: Holistic Cleanse</h3>
-              <div class="service-details">
-                <span class="duration">
-                  <i class="fas fa-clock"></i>
-                  1 hr
-                </span>
-                <span class="price">
-                  <i class="fas fa-gem"></i>
-                  $180
-                </span>
-              </div>
-            </div>
-            <a href="https://calendly.com/dream2heal-un4x/blissful-lavender-salt-scrub-holistic-cleanse?back=1"><button
-              class="btn btn-primary book-btn"
-              data-service="Energy Healing Session"
-            >
-              BOOK
-            </button></a>
-            
-          </div>
-
-          <div class="appointment-card fade-in delay-2">
-            <div class="service-info">
-              <img src="images/fivel.png" alt="Chakra Balancing" />
-              <h3 class="service-name">
-                Mantak Chia Castor Oil Stomach Relief Session: Soothing
-              </h3>
-              <div class="service-details">
-                <span class="duration">
-                  <i class="fas fa-clock"></i>
-                  45 mins
-                </span>
-                <span class="price">
-                  <i class="fas fa-gem"></i>
-                  $200
-                </span>
-              </div>
-            </div>
-            <a href="https://calendly.com/dream2heal-un4x/mantak-chia-castor-oil-stomach-relief-session-soothing?back=1"><button
-              class="btn btn-primary book-btn"
-              data-service="Chakra Balancing"
-            >
-              BOOK
-            </button></a>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gustavo Section -->
-    <!-- Gustavo Section -->
-    <section class="section gustavo-section">
-      <div class="container">
-        <h2 class="section-title">Gustavo de la Torre</h2>
-        <div class="gustavo-content">
-          <div class="gustavo-header">
-            <h4>Caring For Your Wellbeing</h4>
-            <div class="line"></div>
-          </div>
-          <div class="gustavo-container">
-            <div class="gustavo-video">
-              <video controls poster="images/video-preview.jpg">
-                <source src="videos/gustavo-intro.mp4" type="video/mp4" />
-                <source src="videos/gustavo-intro.webm" type="video/webm" />
-                Your browser does not support the video tag.
-              </video>
-              <div class="video-caption">
-                <p>Gustavo - Your Healing Guide</p>
-              </div>
-            </div>
-            <div class="gustavo-text">
-              <p>
-                Step into the world of profound healing with, Gustavo de la
-                Torre, aka "DreamBear"—a name bestowed upon me by an elder,
-                symbolizing my spiritual journey.
-              </p>
-              <p>
-                As a seasoned Bodyworker and Energy Healer with over two decades
-                of experience, I've guided countless souls towards
-                transformative wellness. My passion extends beyond the physical,
-                delving deep into emotional and energetic layers to ignite the
-                spark of healing within you.
-              </p>
-              <p>
-                Through a holistic approach, I aim to untangle emotional and
-                physical knots, fostering harmony between mind, body, and
-                spirit. Central to my practice is the powerful Rice Release
-                Technique™, liberating emotional and physical burdens trapped
-                within the body's core. This technique grants newfound freedom
-                and ease as past struggles dissipate.
-              </p>
-              <p>
-                My work isn't just about techniques—it's about creating a sacred
-                space for each client, where vulnerability is embraced without
-                judgment. With empathy and understanding, I accompany you on
-                this transformative journey, honoring your unique path.
-              </p>
-              <p>
-                I'm dedicated to empowering you to heal, grow, and reclaim your
-                vitality. Together, we'll unlock your body's innate wisdom,
-                guiding you towards a life of balance, joy, and purpose.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Testimonial sect -->
-    <section class="section gustavo-section">
-      <div class="container">
-        <h2 class="section-title">Gustavo </h2>
-        <div class="gustavo-content">
-          <div class="gustavo-header">
-            <h4>What People say about Us</h4>
-            <div class="line"></div>
-          </div>
-          <div class="gustavo-container imgText">
-            
-            <div class="gustavo-text">
-              <p>
-                Step into the world of profound healing with, Gustavo de la
-                Torre, aka "DreamBear"—a name bestowed upon me by an elder,
-                symbolizing my spiritual journey.
-              </p>
-              <p>
-                As a seasoned Bodyworker and Energy Healer with over two decades
-                of experience, I've guided countless souls towards
-                transformative wellness. My passion extends beyond the physical,
-                delving deep into emotional and energetic layers to ignite the
-                spark of healing within you.
-              </p>
-              <p>
-                Through a holistic approach, I aim to untangle emotional and
-                physical knots, fostering harmony between mind, body, and
-                spirit. Central to my practice is the powerful Rice Release
-                Technique™, liberating emotional and physical burdens trapped
-                within the body's core. This technique grants newfound freedom
-                and ease as past struggles dissipate.
-              </p>
-              <p>
-                My work isn't just about techniques—it's about creating a sacred
-                space for each client, where vulnerability is embraced without
-                judgment. With empathy and understanding, I accompany you on
-                this transformative journey, honoring your unique path.
-              </p>
-              <p>
-                I'm dedicated to empowering you to heal, grow, and reclaim your
-                vitality. Together, we'll unlock your body's innate wisdom,
-                guiding you towards a life of balance, joy, and purpose.
-              </p>
-            </div>
-            <div class="gustavo-video">
-              <!-- <video controls poster="images/video-preview.jpg">
+          <div class="gustavo-video">
+            <!-- <video controls poster="images/video-preview.jpg">
                 <source src="videos/gustavo-intro.mp4" type="video/mp4" />
                 <source src="videos/gustavo-intro.webm" type="video/webm" />
                 Your browser does not support the video tag.
@@ -1559,56 +1553,52 @@
               <div class="video-caption">
                 <p>Gustavo - Your Healing Guide</p>
               </div> -->
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Get In Touch</h3>
-            <div class="contact-details">
-              <div class="contact-detail">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>2213 Orange Grove Ave Alhambra CA 91803</p>
-                </div>
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>2213 Orange Grove Ave Alhambra CA 91803</p>
               </div>
-              <div class="contact-detail">
-                <i class="fas fa-phone"></i>
-                <div>
-                  <h4>Phone</h4>
-                  <p>
-                    <a href="tel:323-788-4960">Call Us Now: (323)-788-4960</a>
-                  </p>
-                </div>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>
+                  <a href="tel:323-788-4960">Call Us Now: (323)-788-4960</a>
+                </p>
               </div>
-              <!-- <div class="contact-detail">
+            </div>
+            <!-- <div class="contact-detail">
                 <i class="fas fa-envelope"></i>
                 <div>
                   <h4>Email</h4>
                   <p>info@dreambearhealing.com</p>
                 </div>
               </div> -->
-            </div>
-            <div class="social-links">
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
           </div>
-          <!-- <div class="contact-form">
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
                 <label for="name">Your Name</label>
@@ -1629,114 +1619,114 @@
               <button type="submit" class="btn">Send Message</button>
             </form>
           </div> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>DreamBear Healing</h3>
-            <p>
-              Empowering your journey to wellness through compassionate,
-              personalized healing sessions that align body, mind, and spirit.
-            </p>
-          </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#bodywork">Bodywork & Alignment</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#appointments">Appointments</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Services</h3>
-            <ul class="footer-links">
-              <li><a href="#">Body Reset Session</a></li>
-              <li><a href="#">Luxury Reset Experience</a></li>
-              <li><a href="#">Rejuvenating Jade Stone Massage</a></li>
-              <li><a href="#">Energetic Lavender Salt Body Scrub</a></li>
-              <li><a href="#">Mantak Chia Castor Oil Stomach Massage</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="copyright">
-          <p>&copy; 2024 DreamBear Healing. All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <div class="back-to-top">
-      <i class="fas fa-chevron-up"></i>
-    </div>
-
-    <!-- Read More Modal -->
-    <div id="readMoreModal" class="modal read-more-modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 class="modal-title">About DreamBear Healing</h2>
-        <div class="read-more-content">
-          <h3>
-            For People Determined to Achieve Their Goals in Pleasurable Ways
-          </h3>
-          <p>
-            DreamBear Healing has you covered. Tailored Sessions that Align Body
-            Mind and Spirit with your Highest and Best 2024 Objectives.
-          </p>
-
-          <p>
-            Gustavo combines decades of bodywork expertise with powerful Energy
-            Healing skills to empower your well-being. Using the *Rice Release
-            Technique™, he clears old, stagnant emotional and physical patterns
-            that manifest as pain in your body. These patterns, which often lead
-            to stress and discomfort, are transformed to create a new sense of
-            alignment.
-          </p>
-
-          <p>
-            With four years of intensive training as a Shaman, Gustavo
-            collaborates with your Guides to empower your intentions, helping
-            you achieve your goals with clarity and purpose.
-          </p>
-
-          <h3>The Rice Release Technique™</h3>
-          <p>
-            This unique method developed by Gustavo combines gentle pressure
-            with intuitive energy work to help the body release stored tension
-            and trauma. Unlike traditional deep tissue work that can sometimes
-            be painful, the Rice Release Technique™ works with the body's
-            natural intelligence to unwind patterns of discomfort without adding
-            additional stress.
-          </p>
-
-          <h3>Our Approach to Healing</h3>
-          <p>
-            At DreamBear Healing, we believe that true wellness comes from
-            addressing the root causes of imbalance, not just the symptoms. Our
-            holistic approach considers the interconnectedness of body, mind,
-            and spirit, creating a comprehensive healing experience that
-            supports your overall well-being.
-          </p>
-
-          <p>
-            Whether you're seeking relief from chronic pain, looking to reduce
-            stress, or wanting to enhance your spiritual connection, our
-            sessions are tailored to meet your unique needs and support your
-            personal growth journey.
-          </p>
-        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Calendly Modal -->
-    <!-- <div id="calendlyModal" class="modal calendly-modal">
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>DreamBear Healing</h3>
+          <p>
+            Empowering your journey to wellness through compassionate,
+            personalized healing sessions that align body, mind, and spirit.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#bodywork">Bodywork & Alignment</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Body Reset Session</a></li>
+            <li><a href="#">Luxury Reset Experience</a></li>
+            <li><a href="#">Rejuvenating Jade Stone Massage</a></li>
+            <li><a href="#">Energetic Lavender Salt Body Scrub</a></li>
+            <li><a href="#">Mantak Chia Castor Oil Stomach Massage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 DreamBear Healing. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- Read More Modal -->
+  <div id="readMoreModal" class="modal read-more-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 class="modal-title">About DreamBear Healing</h2>
+      <div class="read-more-content">
+        <h3>
+          For People Determined to Achieve Their Goals in Pleasurable Ways
+        </h3>
+        <p>
+          DreamBear Healing has you covered. Tailored Sessions that Align Body
+          Mind and Spirit with your Highest and Best 2024 Objectives.
+        </p>
+
+        <p>
+          Gustavo combines decades of bodywork expertise with powerful Energy
+          Healing skills to empower your well-being. Using the *Rice Release
+          Technique™, he clears old, stagnant emotional and physical patterns
+          that manifest as pain in your body. These patterns, which often lead
+          to stress and discomfort, are transformed to create a new sense of
+          alignment.
+        </p>
+
+        <p>
+          With four years of intensive training as a Shaman, Gustavo
+          collaborates with your Guides to empower your intentions, helping
+          you achieve your goals with clarity and purpose.
+        </p>
+
+        <h3>The Rice Release Technique™</h3>
+        <p>
+          This unique method developed by Gustavo combines gentle pressure
+          with intuitive energy work to help the body release stored tension
+          and trauma. Unlike traditional deep tissue work that can sometimes
+          be painful, the Rice Release Technique™ works with the body's
+          natural intelligence to unwind patterns of discomfort without adding
+          additional stress.
+        </p>
+
+        <h3>Our Approach to Healing</h3>
+        <p>
+          At DreamBear Healing, we believe that true wellness comes from
+          addressing the root causes of imbalance, not just the symptoms. Our
+          holistic approach considers the interconnectedness of body, mind,
+          and spirit, creating a comprehensive healing experience that
+          supports your overall well-being.
+        </p>
+
+        <p>
+          Whether you're seeking relief from chronic pain, looking to reduce
+          stress, or wanting to enhance your spiritual connection, our
+          sessions are tailored to meet your unique needs and support your
+          personal growth journey.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendly Modal -->
+  <!-- <div id="calendlyModal" class="modal calendly-modal">
       <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h2 class="modal-title">Book Your Session</h2>
@@ -1748,157 +1738,158 @@
       </div>
     </div> -->
 
-    <script>
-      // Mobile Navigation Toggle
-      document
-        .querySelector(".mobile-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-menu").classList.toggle("active");
-          this.querySelector("i").classList.toggle("fa-bars");
-          this.querySelector("i").classList.toggle("fa-times");
-        });
-
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.querySelector(".nav-menu").classList.remove("active");
-          document
-            .querySelector(".mobile-toggle i")
-            .classList.remove("fa-times");
-          document.querySelector(".mobile-toggle i").classList.add("fa-bars");
-        });
+  <script>
+    // Mobile Navigation Toggle
+    document
+      .querySelector(".mobile-toggle")
+      .addEventListener("click", function () {
+        document.querySelector(".nav-menu").classList.toggle("active");
+        this.querySelector("i").classList.toggle("fa-bars");
+        this.querySelector("i").classList.toggle("fa-times");
       });
 
-      // Testimonial Slider
-      const testimonials = document.querySelectorAll(".testimonial");
-      const dots = document.querySelectorAll(".slider-dot");
-      let currentTestimonial = 0;
-
-      function showTestimonial(index) {
-        testimonials.forEach((testimonial) =>
-          testimonial.classList.remove("active")
-        );
-        dots.forEach((dot) => dot.classList.remove("active"));
-
-        testimonials[index].classList.add("active");
-        dots[index].classList.add("active");
-        currentTestimonial = index;
-      }
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          showTestimonial(index);
-        });
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.querySelector(".nav-menu").classList.remove("active");
+        document
+          .querySelector(".mobile-toggle i")
+          .classList.remove("fa-times");
+        document.querySelector(".mobile-toggle i").classList.add("fa-bars");
       });
+    });
 
-      // Auto-rotate testimonials
-      setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      }, 5000);
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll(".testimonial");
+    const dots = document.querySelectorAll(".slider-dot");
+    let currentTestimonial = 0;
 
-      // Modal functionality
-      const readMoreModal = document.getElementById("readMoreModal");
-      const calendlyModal = document.getElementById("calendlyModal");
-      const readMoreBtn = document.querySelector(".read-more-btn");
-      const bookBtns = document.querySelectorAll(".book-btn");
-      const closeModalBtns = document.querySelectorAll(".close-modal");
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial) =>
+        testimonial.classList.remove("active")
+      );
+      dots.forEach((dot) => dot.classList.remove("active"));
 
-      // Open Read More Modal
-      readMoreBtn.addEventListener("click", () => {
-        readMoreModal.style.display = "block";
+      testimonials[index].classList.add("active");
+      dots[index].classList.add("active");
+      currentTestimonial = index;
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showTestimonial(index);
+      });
+    });
+
+    // Auto-rotate testimonials
+    setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }, 5000);
+
+    // Modal functionality
+    const readMoreModal = document.getElementById("readMoreModal");
+    const calendlyModal = document.getElementById("calendlyModal");
+    const readMoreBtn = document.querySelector(".read-more-btn");
+    const bookBtns = document.querySelectorAll(".book-btn");
+    const closeModalBtns = document.querySelectorAll(".close-modal");
+
+    // Open Read More Modal
+    readMoreBtn.addEventListener("click", () => {
+      readMoreModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+
+    // Open Calendly Modal
+    bookBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        calendlyModal.style.display = "block";
         document.body.style.overflow = "hidden";
       });
+    });
 
-      // Open Calendly Modal
-      bookBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          calendlyModal.style.display = "block";
-          document.body.style.overflow = "hidden";
-        });
+    // Close Modals
+    closeModalBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        readMoreModal.style.display = "none";
+        calendlyModal.style.display = "none";
+        document.body.style.overflow = "auto";
       });
+    });
 
-      // Close Modals
-      closeModalBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          readMoreModal.style.display = "none";
-          calendlyModal.style.display = "none";
-          document.body.style.overflow = "auto";
-        });
-      });
-
-      // Close modal when clicking outside
-      window.addEventListener("click", (e) => {
-        if (e.target === readMoreModal) {
-          readMoreModal.style.display = "none";
-          document.body.style.overflow = "auto";
-        }
-        if (e.target === calendlyModal) {
-          calendlyModal.style.display = "none";
-          document.body.style.overflow = "auto";
-        }
-      });
-
-      // Back to Top Button
-      const backToTopBtn = document.querySelector(".back-to-top");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          backToTopBtn.classList.add("visible");
-        } else {
-          backToTopBtn.classList.remove("visible");
-        }
-      });
-
-      backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      // Form Submission
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // In a real implementation, you would send the form data to a server here
-          // For this example, we'll just show an alert
-          alert("Thank you for your message! We will get back to you soon.");
-          this.reset();
-        });
-
-      // Scroll animations
-      const fadeElements = document.querySelectorAll(".fade-in");
-
-      function checkScroll() {
-        fadeElements.forEach((element) => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-
-          if (elementTop < windowHeight - 100) {
-            element.style.animationPlayState = "running";
-          }
-        });
+    // Close modal when clicking outside
+    window.addEventListener("click", (e) => {
+      if (e.target === readMoreModal) {
+        readMoreModal.style.display = "none";
+        document.body.style.overflow = "auto";
       }
+      if (e.target === calendlyModal) {
+        calendlyModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
 
-      window.addEventListener("scroll", checkScroll);
-      window.addEventListener("load", checkScroll);
+    // Back to Top Button
+    const backToTopBtn = document.querySelector(".back-to-top");
 
-      // Header scroll effect
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        if (window.scrollY > 100) {
-          header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
-          header.style.padding = "10px 0";
-          document.querySelector(".logo img").style.height = "100px";
-        } else {
-          header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
-          header.style.padding = "15px 0";
-          document.querySelector(".logo img").style.height = "150px";
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
+    // Form Submission
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // In a real implementation, you would send the form data to a server here
+        // For this example, we'll just show an alert
+        alert("Thank you for your message! We will get back to you soon.");
+        this.reset();
+      });
+
+    // Scroll animations
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    function checkScroll() {
+      fadeElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+          element.style.animationPlayState = "running";
         }
       });
-    </script>
-  </body>
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    window.addEventListener("load", checkScroll);
+
+    // Header scroll effect
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 100) {
+        header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+        header.style.padding = "10px 0";
+        document.querySelector(".logo img").style.height = "100px";
+      } else {
+        header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+        header.style.padding = "15px 0";
+        document.querySelector(".logo img").style.height = "150px";
+      }
+    });
+  </script>
+</body>
+
 </html>
